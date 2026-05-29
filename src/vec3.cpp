@@ -91,6 +91,70 @@ namespace sld {
         }
     }
 
+
+    SLD_MATH_API void
+    vec3_proj(
+        const vec3* in_a, 
+        const vec3* in_b,
+        vec3*       out_c, 
+        const u32   count) {
+
+        assert(
+            in_a  != NULL &&
+            in_b  != NULL &&
+            out_c != NULL &&
+            count != 0
+        );
+
+        for (
+            u32 index = 0;
+                index < count;
+              ++index) {
+
+                const vec3& a      = in_a  [index];            
+                const vec3& b      = in_b  [index];            
+                vec3&       c      = out_c [index];            
+                const f32   dot_ab = ((a.x * b.x) + (a.y * b.y) + (a.z * b.z));
+                const f32   dot_bb = ((b.x * b.x) + (b.y * b.y) + (b.z * b.z));
+                const f32   scalar = (dot_ab / dot_bb);
+                c.x                = (scalar * b.x); 
+                c.y                = (scalar * b.y); 
+                c.z                = (scalar * b.z); 
+        }
+    }
+
+    SLD_MATH_API void
+    vec3_rej(
+        const vec3* in_a, 
+        const vec3* in_b,
+        vec3*       out_c, 
+        const u32   count) {
+
+        assert(
+            in_a  != NULL &&
+            in_b  != NULL &&
+            out_c != NULL &&
+            count != 0
+        );
+
+        for (
+            u32 index = 0;
+                index < count;
+              ++index) {
+
+                const vec3& a        = in_a  [index];            
+                const vec3& b        = in_b  [index];            
+                vec3&       c        = out_c [index];            
+                const f32   dot_ab   = ((a.x * b.x) + (a.y * b.y) + (a.z * b.z));
+                const f32   dot_bb   = ((b.x * b.x) + (b.y * b.y) + (b.z * b.z));
+                const f32   scalar   = (dot_ab / dot_bb);
+                const vec3  scalar_b = { (scalar * b.x), (scalar * b.y), (scalar * b.z) }; 
+                c.x                  = (a.x - scalar_b.x); 
+                c.y                  = (a.y - scalar_b.y); 
+                c.y                  = (a.z - scalar_b.z); 
+        }
+    }
+
     SLD_MATH_API void
     vec3_scalar_mul(
         const vec3* in_v,

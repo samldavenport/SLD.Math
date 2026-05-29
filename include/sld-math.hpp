@@ -29,26 +29,30 @@ namespace sld {
     // VECTOR 2 
     //--------------------------------------------------------------------
 
-    SLD_MATH_API void vec2_add        (const vec2* in_a,  const vec2* in_b, vec2* out_c,   const u32 count = 1);
-    SLD_MATH_API void vec2_sub        (const vec2* in_a,  const vec2* in_b, vec2* out_c,   const u32 count = 1);
-    SLD_MATH_API void vec2_scalar_mul (const vec2* in_v2, const f32*  s,    vec2* out_v2,  const u32 count = 1);
-    SLD_MATH_API void vec2_scalar_div (const vec2* in_v2, const f32*  s,    vec2* out_v2,  const u32 count = 1);
-    SLD_MATH_API void vec2_dot        (const vec2* in_a,  const vec2* in_b, f32*  out_dot, const u32 count = 1);
-    SLD_MATH_API void vec2_magnitude  (const vec2* in_v2, f32* out_mag,                    const u32 count = 1);
-    SLD_MATH_API void vec2_normalize  (const vec2* in_v2, f32* out_mag,                    const u32 count = 1);
+    SLD_MATH_API void vec2_add        (const vec2* in_a, const vec2* in_b, vec2* out_c, const u32 count = 1);
+    SLD_MATH_API void vec2_sub        (const vec2* in_a, const vec2* in_b, vec2* out_c, const u32 count = 1);
+    SLD_MATH_API void vec2_proj       (const vec2* in_a, const vec2* in_b, vec2* out_c, const u32 count = 1);
+    SLD_MATH_API void vec2_rej        (const vec2* in_a, const vec2* in_b, vec2* out_c, const u32 count = 1);
+    SLD_MATH_API void vec2_scalar_mul (const vec2* in_v, const f32*  in_s, vec2* out_v, const u32 count = 1);
+    SLD_MATH_API void vec2_scalar_div (const vec2* in_v, const f32*  in_s, vec2* out_v, const u32 count = 1);
+    SLD_MATH_API void vec2_dot        (const vec2* in_a, const vec2* in_b, f32*  out_d, const u32 count = 1);
+    SLD_MATH_API void vec2_magnitude  (const vec2* in_v, f32*        out_m,             const u32 count = 1);
+    SLD_MATH_API void vec2_normalize  (const vec2* in_v, f32*        out_m,             const u32 count = 1);
 
     //--------------------------------------------------------------------
     // VECTOR 3 
     //--------------------------------------------------------------------
 
-    SLD_MATH_API void vec3_add        (const vec3* in_a,  const vec3* in_b, vec3* out_c,   const u32 count = 1);
-    SLD_MATH_API void vec3_sub        (const vec3* in_a,  const vec3* in_b, vec3* out_c,   const u32 count = 1);
-    SLD_MATH_API void vec3_cross      (const vec3* in_a,  const vec3* in_b, vec3* out_c,   const u32 count = 1);
-    SLD_MATH_API void vec3_scalar_mul (const vec3* in_v2, const f32*  s,    vec3* out_v2,  const u32 count = 1);
-    SLD_MATH_API void vec3_scalar_div (const vec3* in_v2, const f32*  s,    vec3* out_v2,  const u32 count = 1);
-    SLD_MATH_API void vec3_dot        (const vec3* in_a,  const vec2* in_b, f32*  out_dot  const u32 count = 1);
-    SLD_MATH_API void vec3_magnitude  (const vec3* in_v2, f32* out_mag,                    const u32 count = 1);
-    SLD_MATH_API void vec3_normalize  (const vec3* in_v2, f32* out_mag,                    const u32 count = 1);
+    SLD_MATH_API void vec3_add        (const vec3* in_a, const vec3* in_b, vec3* out_c, const u32 count = 1);
+    SLD_MATH_API void vec3_sub        (const vec3* in_a, const vec3* in_b, vec3* out_c, const u32 count = 1);
+    SLD_MATH_API void vec3_proj       (const vec2* in_a, const vec3* in_b, vec3* out_c, const u32 count = 1);
+    SLD_MATH_API void vec3_rej        (const vec2* in_a, const vec3* in_b, vec3* out_c, const u32 count = 1);
+    SLD_MATH_API void vec3_cross      (const vec3* in_a, const vec3* in_b, vec3* out_c, const u32 count = 1);
+    SLD_MATH_API void vec3_scalar_mul (const vec3* in_v, const f32*  in_s, vec3* out_v, const u32 count = 1);
+    SLD_MATH_API void vec3_scalar_div (const vec3* in_v, const f32*  in_s, vec3* out_v, const u32 count = 1);
+    SLD_MATH_API void vec3_dot        (const vec3* in_a, const vec2* in_b, f32*  out_d  const u32 count = 1);
+    SLD_MATH_API void vec3_magnitude  (const vec3* in_v, f32*        out_mag,           const u32 count = 1);
+    SLD_MATH_API void vec3_normalize  (const vec3* in_v, f32*        out_mag,           const u32 count = 1);
 
     //--------------------------------------------------------------------
     // DEFINITIONS 

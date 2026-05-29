@@ -61,6 +61,69 @@ namespace sld {
     }
 
     SLD_MATH_API void
+    vec2_proj(
+        const vec2* in_a, 
+        const vec2* in_b,
+        vec2*       out_c, 
+        const u32   count) {
+
+        assert(
+            in_a  != NULL &&
+            in_b  != NULL &&
+            out_c != NULL &&
+            count != 0
+        );
+
+        for (
+            u32 index = 0;
+                index < count;
+              ++index) {
+
+                const vec2& a = in_a  [index];            
+                const vec2& b = in_b  [index];            
+                vec2&       c = out_c [index];            
+        
+                const f32 dot_ab = ((a.x * b.x) + (a.y * b.y));
+                const f32 dot_bb = ((b.x * b.x) + (b.y * b.y));
+                const f32 scalar = (dot_ab / dot_bb);
+
+                c.x = (scalar * b.x); 
+                c.y = (scalar * b.y); 
+        }
+    }
+
+    SLD_MATH_API void
+    vec2_rej(
+        const vec2* in_a, 
+        const vec2* in_b,
+        vec2*       out_c, 
+        const u32   count) {
+
+        assert(
+            in_a  != NULL &&
+            in_b  != NULL &&
+            out_c != NULL &&
+            count != 0
+        );
+
+        for (
+            u32 index = 0;
+                index < count;
+              ++index) {
+
+                const vec2& a        = in_a  [index];            
+                const vec2& b        = in_b  [index];            
+                vec2&       c        = out_c [index];            
+                const f32   dot_ab   = ((a.x * b.x) + (a.y * b.y));
+                const f32   dot_bb   = ((b.x * b.x) + (b.y * b.y));
+                const f32   scalar   = (dot_ab / dot_bb);
+                const vec2  scalar_b = { (scalar * b.x), (scalar * b.y) }; 
+                c.x                  = (a.x - scalar_b.x); 
+                c.y                  = (a.y - scalar_b.y); 
+        }
+    }
+
+    SLD_MATH_API void
     vec2_scalar_mul(
         const vec2* in_v,
         const f32*  in_s,   
