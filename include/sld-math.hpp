@@ -86,8 +86,8 @@ namespace sld {
             struct {
                 f32 x;
                 f32 y;
-            }
-        }
+            };
+        };
     };
 
     struct vec3 {
@@ -98,7 +98,7 @@ namespace sld {
                 f32 y;
                 f32 z;
             };
-        }
+        };
     };
 
     struct mat3 {
