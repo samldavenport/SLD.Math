@@ -30,53 +30,52 @@ namespace sld {
     // VECTOR 2 
     //--------------------------------------------------------------------
 
-    SLD_MATH_API void vec2_add (const vec2* in_a, const vec2* in_b, vec2* out_c, const u32 count = 1);
-    SLD_MATH_API void vec2_sub (const vec2* in_a, const vec2* in_b, vec2* out_c, const u32 count = 1);
-    SLD_MATH_API void vec2_prj (const vec2* in_a, const vec2* in_b, vec2* out_c, const u32 count = 1);
-    SLD_MATH_API void vec2_rej (const vec2* in_a, const vec2* in_b, vec2* out_c, const u32 count = 1);
-    SLD_MATH_API void vec2_mul (const vec2* in_v, const f32*  in_s, vec2* out_v, const u32 count = 1);
-    SLD_MATH_API void vec2_div (const vec2* in_v, const f32*  in_s, vec2* out_v, const u32 count = 1);
-    SLD_MATH_API void vec2_dot (const vec2* in_a, const vec2* in_b, f32*  out_d, const u32 count = 1);
-    SLD_MATH_API void vec2_mag (const vec2* in_v, f32*        out_m,             const u32 count = 1);
-    SLD_MATH_API void vec2_nrm (const vec2* in_v, f32*        out_m,             const u32 count = 1);
+    SLD_MATH_API void        math_vec2_add             (vec2* o_c, const vec2* i_a, const vec2* i_b,  const u32 i_count = 1);
+    SLD_MATH_API void        math_vec2_subtract        (vec2* o_c, const vec2* i_a, const vec2* i_b,  const u32 i_count = 1);
+    SLD_MATH_API void        math_vec2_project         (vec2* o_c, const vec2* i_a, const vec2* i_b,  const u32 i_count = 1);
+    SLD_MATH_API void        math_vec2_reject          (vec2* o_c, const vec2* i_a, const vec2* i_b,  const u32 i_count = 1);
+    SLD_MATH_API void        math_vec2_scalar_multiply (vec2* o_v, const vec2* i_v, const f32*  i_s,  const u32 i_count = 1);
+    SLD_MATH_API void        math_vec2_scalar_divide   (vec2* o_v, const vec2* i_v, const f32*  i_s,  const u32 i_count = 1);
+    SLD_MATH_API void        math_vec2_dot             (f32*  o_d, const vec2* i_a, const vec2* i_b,  const u32 i_count = 1);
+    SLD_MATH_API void        math_vec2_magnitude       (f32*  o_m, const vec2* i_v,                   const u32 i_count = 1);
+    SLD_MATH_API void        math_vec2_normalize       (f32*  o_m, const vec2* i_v,                   const u32 i_count = 1);
 
     //--------------------------------------------------------------------
     // VECTOR 3 
     //--------------------------------------------------------------------
 
-    SLD_MATH_API void vec3_add (const vec3* in_a, const vec3* in_b, vec3* out_c, const u32 count = 1);
-    SLD_MATH_API void vec3_sub (const vec3* in_a, const vec3* in_b, vec3* out_c, const u32 count = 1);
-    SLD_MATH_API void vec3_prj (const vec2* in_a, const vec3* in_b, vec3* out_c, const u32 count = 1);
-    SLD_MATH_API void vec3_rej (const vec2* in_a, const vec3* in_b, vec3* out_c, const u32 count = 1);
-    SLD_MATH_API void vec3_crs (const vec3* in_a, const vec3* in_b, vec3* out_c, const u32 count = 1);
-    SLD_MATH_API void vec3_mul (const vec3* in_v, const f32*  in_s, vec3* out_v, const u32 count = 1);
-    SLD_MATH_API void vec3_div (const vec3* in_v, const f32*  in_s, vec3* out_v, const u32 count = 1);
-    SLD_MATH_API void vec3_dot (const vec3* in_a, const vec2* in_b, f32*  out_d, const u32 count = 1);
-    SLD_MATH_API void vec3_mag (const vec3* in_v, f32*        out_m,             const u32 count = 1);
-    SLD_MATH_API void vec3_nrm (const vec3* in_v, f32*        out_m,             const u32 count = 1);
+    SLD_MATH_API void        math_vec3_add             (vec3* o_c, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void        math_vec3_subtract        (vec3* o_c, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void        math_vec3_project         (vec3* o_c, const vec2* i_a, const vec3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void        math_vec3_reject          (vec3* o_c, const vec2* i_a, const vec3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void        math_vec3_cross           (vec3* o_c, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void        math_vec3_scalar_multiply (vec3* o_v, const vec3* i_v, const f32*  i_s, const u32 i_count = 1);
+    SLD_MATH_API void        math_vec3_scalar_divide   (vec3* o_v, const vec3* i_v, const f32*  i_s, const u32 i_count = 1);
+    SLD_MATH_API void        math_vec3_dot             (f32*  o_d, const vec3* i_a, const vec2* i_b, const u32 i_count = 1);
+    SLD_MATH_API void        math_vec3_magnitude       (f32*  o_m, const vec3* i_v,                  const u32 i_count = 1);
+    SLD_MATH_API void        math_vec3_normalize       (f32*  o_m, const vec3* i_v,                  const u32 i_count = 1);
 
     //--------------------------------------------------------------------
     // MATRIX 3 
     //--------------------------------------------------------------------
 
-    SLD_MATH_API const mat3& mat3_idt (void);
-    SLD_MATH_API void        mat3_det (const mat3* in_m, f32*        out_d,             const u32 count = 1);
-    SLD_MATH_API void        mat3_trn (const mat3* in_m, mat3*       out_t,             const u32 count = 1);
-    SLD_MATH_API void        mat3_inv (const mat3* in_m, mat3*       out_t,             const u32 count = 1);
-    SLD_MATH_API void        mat3_mul (const mat3* in_a, const mat3* in_b, mat3* out_c, const u32 count = 1);
-
+    SLD_MATH_API const mat3& math_mat3_identity        (void);
+    SLD_MATH_API void        math_mat3_determinant     (f32*  o_d, const mat3* i_m,                  const u32 i_count = 1);
+    SLD_MATH_API void        math_mat3_transpose       (mat3* o_t, const mat3* i_m,                  const u32 i_count = 1);
+    SLD_MATH_API void        math_mat3_invert          (mat3* o_t, const mat3* i_m,                  const u32 i_count = 1);
+    SLD_MATH_API void        math_mat3_multiply        (mat3* o_c, const mat3* i_a, const mat3* i_b, const u32 i_count = 1);
 
     //--------------------------------------------------------------------
     // TRANSFORMS 
     //--------------------------------------------------------------------
 
-    void tfrm_rot_x (const f32   in_a, trfm*       out_t,             const u32 count = 1);
-    void tfrm_rot_y (const f32   in_a, trfm*       out_t,             const u32 count = 1);
-    void tfrm_rot_z (const f32   in_a, trfm*       out_t,             const u32 count = 1);
-    void tfrm_rot_v (const c32   in_a, const vec3* in_v, trfm* out_t, const u32 count = 1);
-    void tfrm_scl_u (const f32*  in_s, trfm*       out_t,             const u32 count = 1);
-    void tfrm_scl_n (const vec3* in_s, trfm*       out_t,             const u32 count = 1);
-    void tfrm_trn_n (const vec3* in_p, trfm*       out_t,             const u32 count = 1);
+    SLD_MATH_API void        math_rotate_vector        (mat4* o_m, const f32*  i_a, const vec3* i_v, const u32 i_count = 1);
+    SLD_MATH_API void        math_rotate_axis_x        (mat4* o_m, const f32*  i_a,                  const u32 i_count = 1);
+    SLD_MATH_API void        math_rotate_axis_y        (mat4* o_m, const f32*  i_a,                  const u32 i_count = 1);
+    SLD_MATH_API void        math_rotate_axis_z        (mat4* o_m, const f32*  i_a,                  const u32 i_count = 1);
+    SLD_MATH_API void        math_scale_uniform        (mat4* o_m, const f32*  i_s,                  const u32 i_count = 1);
+    SLD_MATH_API void        math_scale_non_uniform    (mat4* o_m, const vec3* i_s,                  const u32 i_count = 1);
+    SLD_MATH_API void        math_translate            (mat4* o_m, const vec3* i_p,                  const u32 i_count = 1);
 
     //--------------------------------------------------------------------
     // DEFINITIONS 
