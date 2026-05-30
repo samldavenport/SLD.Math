@@ -4,7 +4,6 @@
 #include <math.h>
 #include <sld.hpp>
 
-
 #ifdef SLD_MATH_STATIC
 #   define SLD_MATH_API
 #elif defined(SLD_MATH_DLL_EXPORT)
