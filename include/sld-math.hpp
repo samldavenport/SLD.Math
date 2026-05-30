@@ -28,16 +28,128 @@ namespace sld {
     //--------------------------------------------------------------------
     // VECTOR 2 
     //--------------------------------------------------------------------
+    
+    /// @brief         Add 2D vector A to B
+    /// @param o_c     Output vector
+    /// @param i_a     Input Vector A
+    /// @param i_b     Input Vector B
+    /// @param i_count Input Vector count, default 1
+    /// @return        void 
+    SLD_MATH_API void
+    vec2_add(
+        vec2*       o_c,
+        const vec2* i_a,
+        const vec2* i_b,
+        const u32   i_count = 1
+    );
 
-    SLD_MATH_API void        vec2_add             (vec2* o_c, const vec2* i_a, const vec2* i_b, const u32 i_count = 1);
-    SLD_MATH_API void        vec2_subtract        (vec2* o_c, const vec2* i_a, const vec2* i_b, const u32 i_count = 1);
-    SLD_MATH_API void        vec2_project         (vec2* o_c, const vec2* i_a, const vec2* i_b, const u32 i_count = 1);
-    SLD_MATH_API void        vec2_reject          (vec2* o_c, const vec2* i_a, const vec2* i_b, const u32 i_count = 1);
-    SLD_MATH_API void        vec2_scalar_multiply (vec2* o_v, const vec2* i_v, const f32*  i_s, const u32 i_count = 1);
-    SLD_MATH_API void        vec2_scalar_divide   (vec2* o_v, const vec2* i_v, const f32*  i_s, const u32 i_count = 1);
-    SLD_MATH_API void        vec2_dot             (f32*  o_d, const vec2* i_a, const vec2* i_b, const u32 i_count = 1);
-    SLD_MATH_API void        vec2_magnitude       (f32*  o_m, const vec2* i_v,                  const u32 i_count = 1);
-    SLD_MATH_API void        vec2_normalize       (f32*  o_m, const vec2* i_v,                  const u32 i_count = 1);
+    /// @brief         Subtract 2D vector b from a 
+    /// @param o_c     Output 2D vector
+    /// @param i_a     Input 2D vector a
+    /// @param i_b     Input 2D vector b
+    /// @param i_count count vectors, default = 1
+    /// @return void
+    SLD_MATH_API void
+    vec2_subtract(
+        vec2*       o_c,
+        const vec2* i_a,
+        const vec2* i_b,
+        const u32   i_count = 1
+    );
+    
+    /// @brief         Project 2D vector A onto B
+    /// @param o_c     Output 2D vector
+    /// @param i_a     Input 2D vector A
+    /// @param i_b     Input 2D vector B
+    /// @param i_count Input 2D vector count, default 1
+    /// @return        void 
+    SLD_MATH_API void
+    vec2_project(
+        vec2*       o_c,
+        const vec2* i_a,
+        const vec2* i_b,
+        const u32   i_count = 1
+    );
+
+    /// @brief         Reject 2D vector B from A 
+    /// @param o_c     Output 2D vector
+    /// @param i_a     Input 2D vector A
+    /// @param i_b     Input 2D vector B
+    /// @param i_count Input 2D vector count
+    /// @return        void
+    SLD_MATH_API void
+    vec2_reject(
+        vec2*       o_c,
+        const vec2* i_a,
+        const vec2* i_b,
+        const u32   i_count = 1
+    );
+
+    /// @brief         Multiply 2D vector by scalar 
+    /// @param o_v     Result 2D Vector
+    /// @param i_v     Input 2D Vector
+    /// @param i_s     Input Scalar
+    /// @param i_count Input 2D Vector count
+    /// @return        void
+    SLD_MATH_API void
+    vec2_scalar_multiply(
+        vec2*       o_v,
+        const vec2* i_v,
+        const f32*  i_s,
+        const u32   i_count = 1
+    );
+
+    /// @brief         Divide 2D vector by scalar 
+    /// @param o_v     Output 2D vector
+    /// @param i_v     Input 2D vector
+    /// @param i_s     Input scalar
+    /// @param i_count Input 2D Vector count
+    /// @return        void
+    SLD_MATH_API void
+    vec2_scalar_divide(
+        vec2*       o_v,
+        const vec2* i_v,
+        const f32*  i_s,
+        const u32   i_count = 1
+    );
+    
+    /// @brief         Dot product of 2D vectors A and B
+    /// @param o_d     Output dot product
+    /// @param i_a     Input vector A
+    /// @param i_b     Input vector B
+    /// @param i_count Input vector count, default 1
+    /// @return        void
+    SLD_MATH_API void
+    vec2_dot(
+        f32*        o_d,
+        const vec2* i_a,
+        const vec2* i_b,
+        const u32   i_count = 1
+    );
+
+    /// @brief         2D Vector magnitude
+    /// @param o_m     Output magnitude
+    /// @param i_v     Input 2D vector
+    /// @param i_count Input 2D vector count
+    /// @return        void
+    SLD_MATH_API void
+    vec2_magnitude(
+        f32*        o_m,
+        const vec2* i_v,
+        const u32   i_count = 1
+    );
+
+    /// @brief         Normalize 2D vector
+    /// @param o_m     Output normalized 2D vector
+    /// @param i_v     Input 2D vector
+    /// @param i_count Input 2D vector count
+    /// @return        void
+    SLD_MATH_API void
+    vec2_normalize(
+        f32*        o_m,
+        const vec2* i_v,
+        const u32   i_count = 1
+    );
 
     //--------------------------------------------------------------------
     // VECTOR 3 
@@ -63,6 +175,16 @@ namespace sld {
     SLD_MATH_API void        mat3_transpose       (mat3* o_t, const mat3* i_m,                  const u32 i_count = 1);
     SLD_MATH_API void        mat3_invert          (mat3* o_t, const mat3* i_m,                  const u32 i_count = 1);
     SLD_MATH_API void        mat3_multiply        (mat3* o_c, const mat3* i_a, const mat3* i_b, const u32 i_count = 1);
+
+    //--------------------------------------------------------------------
+    // MATRIX 4 
+    //--------------------------------------------------------------------
+
+    SLD_MATH_API const mat4& mat4_identity        (void);
+    SLD_MATH_API void        mat4_determinant     (f32*  o_d, const mat4* i_m,                  const u32 i_count = 1);
+    SLD_MATH_API void        mat4_transpose       (mat4* o_t, const mat4* i_m,                  const u32 i_count = 1);
+    SLD_MATH_API void        mat4_invert          (mat4* o_t, const mat4* i_m,                  const u32 i_count = 1);
+    SLD_MATH_API void        mat4_multiply        (mat4* o_c, const mat4* i_a, const mat3* i_b, const u32 i_count = 1);
 
     //--------------------------------------------------------------------
     // TRANSFORMS 

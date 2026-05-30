@@ -1,0 +1,234 @@
+\doxysection{sld-\/math.hpp}
+\hypertarget{sld-math_8hpp_source}{}\label{sld-math_8hpp_source}\index{include/sld-\/math.hpp@{include/sld-\/math.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SLD\_MATH\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SLD\_MATH\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <sld.hpp>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifdef\ SLD\_MATH\_STATIC}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#\ \ \ define\ SLD\_MATH\_API}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#elif\ defined(SLD\_MATH\_DLL\_EXPORT)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#\ \ \ define\ SLD\_MATH\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#\ \ \ define\ SLD\_MATH\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }sld\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ STRUCTURED\ TYPES}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{struct\ }vec2;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{struct\ }vec3;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{struct\ }mat3;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{struct\ }mat4;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{struct\ }quat;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ VECTOR\ 2\ }}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00031\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00039\ \ \ \ \ vec2\_add(}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ vec2*\ \ \ \ \ \ \ o\_c,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vec2*\ i\_a,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vec2*\ i\_b,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ \ \ i\_count\ =\ 1}
+\DoxyCodeLine{00044\ \ \ \ \ );}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00052\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00053\ \ \ \ \ vec2\_subtract(}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ vec2*\ \ \ \ \ \ \ o\_c,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vec2*\ i\_a,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vec2*\ i\_b,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ \ \ i\_count\ =\ 1}
+\DoxyCodeLine{00058\ \ \ \ \ );}
+\DoxyCodeLine{00059\ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00067\ \ \ \ \ vec2\_project(}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ vec2*\ \ \ \ \ \ \ o\_c,}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vec2*\ i\_a,}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vec2*\ i\_b,}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ \ \ i\_count\ =\ 1}
+\DoxyCodeLine{00072\ \ \ \ \ );}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00080\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00081\ \ \ \ \ vec2\_reject(}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ vec2*\ \ \ \ \ \ \ o\_c,}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vec2*\ i\_a,}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vec2*\ i\_b,}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ \ \ i\_count\ =\ 1}
+\DoxyCodeLine{00086\ \ \ \ \ );}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00094\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00095\ \ \ \ \ vec2\_scalar\_multiply(}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ vec2*\ \ \ \ \ \ \ o\_v,}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vec2*\ i\_v,}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ f32*\ \ i\_s,}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ \ \ i\_count\ =\ 1}
+\DoxyCodeLine{00100\ \ \ \ \ );}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00108\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00109\ \ \ \ \ vec2\_scalar\_divide(}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ vec2*\ \ \ \ \ \ \ o\_v,}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vec2*\ i\_v,}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ f32*\ \ i\_s,}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ \ \ i\_count\ =\ 1}
+\DoxyCodeLine{00114\ \ \ \ \ );}
+\DoxyCodeLine{00115\ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00123\ \ \ \ \ vec2\_dot(}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ f32*\ \ \ \ \ \ \ \ o\_d,}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vec2*\ i\_a,}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vec2*\ i\_b,}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ \ \ i\_count\ =\ 1}
+\DoxyCodeLine{00128\ \ \ \ \ );}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00135\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00136\ \ \ \ \ vec2\_magnitude(}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ f32*\ \ \ \ \ \ \ \ o\_m,}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vec2*\ i\_v,}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ \ \ i\_count\ =\ 1}
+\DoxyCodeLine{00140\ \ \ \ \ );}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00147\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00148\ \ \ \ \ vec2\_normalize(}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ f32*\ \ \ \ \ \ \ \ o\_m,}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vec2*\ i\_v,}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ \ \ i\_count\ =\ 1}
+\DoxyCodeLine{00152\ \ \ \ \ );}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//\ VECTOR\ 3\ }}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ vec3\_add\ \ \ \ \ \ \ \ \ \ \ \ \ (vec3*\ o\_c,\ \textcolor{keyword}{const}\ vec3*\ i\_a,\ \textcolor{keyword}{const}\ vec3*\ i\_b,\ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00159\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ vec3\_subtract\ \ \ \ \ \ \ \ (vec3*\ o\_c,\ \textcolor{keyword}{const}\ vec3*\ i\_a,\ \textcolor{keyword}{const}\ vec3*\ i\_b,\ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00160\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ vec3\_project\ \ \ \ \ \ \ \ \ (vec3*\ o\_c,\ \textcolor{keyword}{const}\ vec2*\ i\_a,\ \textcolor{keyword}{const}\ vec3*\ i\_b,\ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00161\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ vec3\_reject\ \ \ \ \ \ \ \ \ \ (vec3*\ o\_c,\ \textcolor{keyword}{const}\ vec2*\ i\_a,\ \textcolor{keyword}{const}\ vec3*\ i\_b,\ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00162\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ vec3\_cross\ \ \ \ \ \ \ \ \ \ \ (vec3*\ o\_c,\ \textcolor{keyword}{const}\ vec3*\ i\_a,\ \textcolor{keyword}{const}\ vec3*\ i\_b,\ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00163\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ vec3\_scalar\_multiply\ (vec3*\ o\_v,\ \textcolor{keyword}{const}\ vec3*\ i\_v,\ \textcolor{keyword}{const}\ f32*\ \ i\_s,\ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00164\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ vec3\_scalar\_divide\ \ \ (vec3*\ o\_v,\ \textcolor{keyword}{const}\ vec3*\ i\_v,\ \textcolor{keyword}{const}\ f32*\ \ i\_s,\ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00165\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ vec3\_dot\ \ \ \ \ \ \ \ \ \ \ \ \ (f32*\ \ o\_d,\ \textcolor{keyword}{const}\ vec3*\ i\_a,\ \textcolor{keyword}{const}\ vec2*\ i\_b,\ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00166\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ vec3\_magnitude\ \ \ \ \ \ \ (f32*\ \ o\_m,\ \textcolor{keyword}{const}\ vec3*\ i\_v,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00167\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ vec3\_normalize\ \ \ \ \ \ \ (f32*\ \ o\_m,\ \textcolor{keyword}{const}\ vec3*\ i\_v,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//\ MATRIX\ 3\ }}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keyword}{const}\ mat3\&\ mat3\_identity\ \ \ \ \ \ \ \ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00174\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ mat3\_determinant\ \ \ \ \ (f32*\ \ o\_d,\ \textcolor{keyword}{const}\ mat3*\ i\_m,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00175\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ mat3\_transpose\ \ \ \ \ \ \ (mat3*\ o\_t,\ \textcolor{keyword}{const}\ mat3*\ i\_m,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00176\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ mat3\_invert\ \ \ \ \ \ \ \ \ \ (mat3*\ o\_t,\ \textcolor{keyword}{const}\ mat3*\ i\_m,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00177\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ mat3\_multiply\ \ \ \ \ \ \ \ (mat3*\ o\_c,\ \textcolor{keyword}{const}\ mat3*\ i\_a,\ \textcolor{keyword}{const}\ mat3*\ i\_b,\ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{comment}{//\ MATRIX\ 4\ }}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keyword}{const}\ mat4\&\ mat4\_identity\ \ \ \ \ \ \ \ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00184\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ mat4\_determinant\ \ \ \ \ (f32*\ \ o\_d,\ \textcolor{keyword}{const}\ mat4*\ i\_m,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00185\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ mat4\_transpose\ \ \ \ \ \ \ (mat4*\ o\_t,\ \textcolor{keyword}{const}\ mat4*\ i\_m,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00186\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ mat4\_invert\ \ \ \ \ \ \ \ \ \ (mat4*\ o\_t,\ \textcolor{keyword}{const}\ mat4*\ i\_m,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00187\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ mat4\_multiply\ \ \ \ \ \ \ \ (mat4*\ o\_c,\ \textcolor{keyword}{const}\ mat4*\ i\_a,\ \textcolor{keyword}{const}\ mat3*\ i\_b,\ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{comment}{//\ TRANSFORMS\ }}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ rotate\_vector\ \ \ \ \ \ \ \ (mat4*\ o\_m,\ \textcolor{keyword}{const}\ f32*\ \ i\_a,\ \textcolor{keyword}{const}\ vec3*\ i\_v,\ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00194\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ rotate\_axis\_x\ \ \ \ \ \ \ \ (mat4*\ o\_m,\ \textcolor{keyword}{const}\ f32*\ \ i\_a,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00195\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ rotate\_axis\_y\ \ \ \ \ \ \ \ (mat4*\ o\_m,\ \textcolor{keyword}{const}\ f32*\ \ i\_a,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00196\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ rotate\_axis\_z\ \ \ \ \ \ \ \ (mat4*\ o\_m,\ \textcolor{keyword}{const}\ f32*\ \ i\_a,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00197\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ scale\_uniform\ \ \ \ \ \ \ \ (mat4*\ o\_m,\ \textcolor{keyword}{const}\ f32*\ \ i\_s,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00198\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ scale\_non\_uniform\ \ \ \ (mat4*\ o\_m,\ \textcolor{keyword}{const}\ vec3*\ i\_s,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00199\ \ \ \ \ SLD\_MATH\_API\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ translate\ \ \ \ \ \ \ \ \ \ \ \ (mat4*\ o\_m,\ \textcolor{keyword}{const}\ vec3*\ i\_p,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ u32\ i\_count\ =\ 1);}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{comment}{//\ DEFINITIONS\ }}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsld_1_1vec2}{vec2}}\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ f32\ v[2];}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ x;}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ y;}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00213\ \ \ \ \ \};}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsld_1_1vec3}{vec3}}\ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ f32\ v[3];}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ x;}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ y;}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ z;}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00224\ \ \ \ \ \};}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsld_1_1mat3}{mat3}}\ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ f32\ m[9];}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r0c0;}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r0c1;}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r0c2;}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r1c0;}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r1c1;}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r1c2;}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r2c0;}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r2c1;}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r2c2;}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00241\ \ \ \ \ \};}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsld_1_1mat4}{mat4}}\ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ f32\ m[16];}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r0c0;}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r0c1;}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r0c2;}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r0c3;}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r1c0;}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r1c1;}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r1c2;}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r1c3;}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r2c0;}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r2c1;}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r2c2;}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r2c3;}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r3c0;}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r3c1;}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r3c2;}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ r3c3;}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00265\ \ \ \ \ \};}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsld_1_1quat}{quat}}\ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ f32\ q[4];}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ x;}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ y;}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ z;}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f32\ w;}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00277\ \ \ \ \ \};}
+\DoxyCodeLine{00278\ \};}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SLD\_MATH\_HPP}}
+
+\end{DoxyCode}

@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="d4/dc7/structsld_1_1mat4" kind="struct" language="C++" prot="public">
+    <compoundname>sld::mat4</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1a1e89e2cd076c1d61c05dd88d575613a2" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::m[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>m</name>
+        <qualifiedname>sld::mat4::m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="245" column="17" bodyfile="include/sld-math.hpp" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1ace343c374960c58279510f62d128b189" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::r0c0</definition>
+        <argsstring></argsstring>
+        <name>r0c0</name>
+        <qualifiedname>sld::mat4::r0c0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="247" column="21" bodyfile="include/sld-math.hpp" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1ab59c9072d4955ac8e77c2dce9953f868" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::r0c1</definition>
+        <argsstring></argsstring>
+        <name>r0c1</name>
+        <qualifiedname>sld::mat4::r0c1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="248" column="21" bodyfile="include/sld-math.hpp" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1ac15cc3732a1181add15b09a73e104fe2" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::r0c2</definition>
+        <argsstring></argsstring>
+        <name>r0c2</name>
+        <qualifiedname>sld::mat4::r0c2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="249" column="21" bodyfile="include/sld-math.hpp" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1ac39fafe47c1acfa282de2a12a918883b" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::r0c3</definition>
+        <argsstring></argsstring>
+        <name>r0c3</name>
+        <qualifiedname>sld::mat4::r0c3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="250" column="21" bodyfile="include/sld-math.hpp" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1a65dbc7ce03f3bce8c0e20fc66bd4652b" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::r1c0</definition>
+        <argsstring></argsstring>
+        <name>r1c0</name>
+        <qualifiedname>sld::mat4::r1c0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="251" column="21" bodyfile="include/sld-math.hpp" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1a9d7c76c664bf5c19985f0b6fd830b8b3" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::r1c1</definition>
+        <argsstring></argsstring>
+        <name>r1c1</name>
+        <qualifiedname>sld::mat4::r1c1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="252" column="21" bodyfile="include/sld-math.hpp" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1a35a9bbd2763491e1776715c1cd12cb19" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::r1c2</definition>
+        <argsstring></argsstring>
+        <name>r1c2</name>
+        <qualifiedname>sld::mat4::r1c2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="253" column="21" bodyfile="include/sld-math.hpp" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1aa00f59bc727aacc0b8729f596ae517f1" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::r1c3</definition>
+        <argsstring></argsstring>
+        <name>r1c3</name>
+        <qualifiedname>sld::mat4::r1c3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="254" column="21" bodyfile="include/sld-math.hpp" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1aa33971cea7fbfd966085b32e4481241e" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::r2c0</definition>
+        <argsstring></argsstring>
+        <name>r2c0</name>
+        <qualifiedname>sld::mat4::r2c0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="255" column="21" bodyfile="include/sld-math.hpp" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1a097a72b87dbc00143ccdb06be907da09" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::r2c1</definition>
+        <argsstring></argsstring>
+        <name>r2c1</name>
+        <qualifiedname>sld::mat4::r2c1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="256" column="21" bodyfile="include/sld-math.hpp" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1a793e12470e3ef3aa12a70d96f60f7408" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::r2c2</definition>
+        <argsstring></argsstring>
+        <name>r2c2</name>
+        <qualifiedname>sld::mat4::r2c2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="257" column="21" bodyfile="include/sld-math.hpp" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1acc3e966473d9c9601453e99dd661c273" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::r2c3</definition>
+        <argsstring></argsstring>
+        <name>r2c3</name>
+        <qualifiedname>sld::mat4::r2c3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="258" column="21" bodyfile="include/sld-math.hpp" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1a114ffb12f96e8dcfd749b5a8ef18b5f5" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::r3c0</definition>
+        <argsstring></argsstring>
+        <name>r3c0</name>
+        <qualifiedname>sld::mat4::r3c0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="259" column="21" bodyfile="include/sld-math.hpp" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1a69d05b0a7aab645a1e6d3fd43d8b0c9f" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::r3c1</definition>
+        <argsstring></argsstring>
+        <name>r3c1</name>
+        <qualifiedname>sld::mat4::r3c1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="260" column="21" bodyfile="include/sld-math.hpp" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1aa72f0d0ab2c34ffdca53c515104f164e" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::r3c2</definition>
+        <argsstring></argsstring>
+        <name>r3c2</name>
+        <qualifiedname>sld::mat4::r3c2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="261" column="21" bodyfile="include/sld-math.hpp" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1a2202fb4591102399dd89e7e4328f0792" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::mat4::r3c3</definition>
+        <argsstring></argsstring>
+        <name>r3c3</name>
+        <qualifiedname>sld::mat4::r3c3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="262" column="21" bodyfile="include/sld-math.hpp" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dc7/structsld_1_1mat4_1aff5e559f56062f3a432ea0105c09d2e5" prot="public" static="no" mutable="no">
+        <type>union <ref refid="d4/dc7/structsld_1_1mat4" kindref="compound">sld::mat4</ref></type>
+        <definition>union sld::mat4 sld::mat4</definition>
+        <argsstring></argsstring>
+        <name></name>
+        <qualifiedname>sld::mat4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="264" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/sld-math.hpp" line="243" column="5" bodyfile="include/sld-math.hpp" bodystart="243" bodyend="265"/>
+    <listofallmembers>
+      <member refid="d4/dc7/structsld_1_1mat4_1a1e89e2cd076c1d61c05dd88d575613a2" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>m</name></member>
+      <member refid="d4/dc7/structsld_1_1mat4_1ace343c374960c58279510f62d128b189" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>r0c0</name></member>
+      <member refid="d4/dc7/structsld_1_1mat4_1ab59c9072d4955ac8e77c2dce9953f868" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>r0c1</name></member>
+      <member refid="d4/dc7/structsld_1_1mat4_1ac15cc3732a1181add15b09a73e104fe2" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>r0c2</name></member>
+      <member refid="d4/dc7/structsld_1_1mat4_1ac39fafe47c1acfa282de2a12a918883b" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>r0c3</name></member>
+      <member refid="d4/dc7/structsld_1_1mat4_1a65dbc7ce03f3bce8c0e20fc66bd4652b" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>r1c0</name></member>
+      <member refid="d4/dc7/structsld_1_1mat4_1a9d7c76c664bf5c19985f0b6fd830b8b3" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>r1c1</name></member>
+      <member refid="d4/dc7/structsld_1_1mat4_1a35a9bbd2763491e1776715c1cd12cb19" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>r1c2</name></member>
+      <member refid="d4/dc7/structsld_1_1mat4_1aa00f59bc727aacc0b8729f596ae517f1" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>r1c3</name></member>
+      <member refid="d4/dc7/structsld_1_1mat4_1aa33971cea7fbfd966085b32e4481241e" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>r2c0</name></member>
+      <member refid="d4/dc7/structsld_1_1mat4_1a097a72b87dbc00143ccdb06be907da09" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>r2c1</name></member>
+      <member refid="d4/dc7/structsld_1_1mat4_1a793e12470e3ef3aa12a70d96f60f7408" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>r2c2</name></member>
+      <member refid="d4/dc7/structsld_1_1mat4_1acc3e966473d9c9601453e99dd661c273" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>r2c3</name></member>
+      <member refid="d4/dc7/structsld_1_1mat4_1a114ffb12f96e8dcfd749b5a8ef18b5f5" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>r3c0</name></member>
+      <member refid="d4/dc7/structsld_1_1mat4_1a69d05b0a7aab645a1e6d3fd43d8b0c9f" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>r3c1</name></member>
+      <member refid="d4/dc7/structsld_1_1mat4_1aa72f0d0ab2c34ffdca53c515104f164e" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>r3c2</name></member>
+      <member refid="d4/dc7/structsld_1_1mat4_1a2202fb4591102399dd89e7e4328f0792" prot="public" virt="non-virtual"><scope>sld::mat4</scope><name>r3c3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

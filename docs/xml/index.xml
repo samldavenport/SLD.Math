@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.10.0" xml:lang="en-US">
+  <compound refid="d1/dfa/structsld_1_1mat3" kind="struct"><name>sld::mat3</name>
+    <member refid="d1/dfa/structsld_1_1mat3_1a9f9840a4810aa7d4562dc38d27b8d1c6" kind="variable"><name>m</name></member>
+    <member refid="d1/dfa/structsld_1_1mat3_1a9619b2afd8b23cbf660116fbf510d9ba" kind="variable"><name>r0c0</name></member>
+    <member refid="d1/dfa/structsld_1_1mat3_1a546e43a6b3f629b10b2fe3ade9beb6f3" kind="variable"><name>r0c1</name></member>
+    <member refid="d1/dfa/structsld_1_1mat3_1a1286001bf8577d489bca328260a490c9" kind="variable"><name>r0c2</name></member>
+    <member refid="d1/dfa/structsld_1_1mat3_1a4fc2b6fd2d7b8679313a48dec6bab7f7" kind="variable"><name>r1c0</name></member>
+    <member refid="d1/dfa/structsld_1_1mat3_1a1301a41baa9167b72eeb781197fe2e7d" kind="variable"><name>r1c1</name></member>
+    <member refid="d1/dfa/structsld_1_1mat3_1acd886c61abd9fb56010699f16bd9ad6e" kind="variable"><name>r1c2</name></member>
+    <member refid="d1/dfa/structsld_1_1mat3_1a7a1ab7be40d49b4faeb3ae62451d34ca" kind="variable"><name>r2c0</name></member>
+    <member refid="d1/dfa/structsld_1_1mat3_1a4405120536283eecedfcb0d57074cf7f" kind="variable"><name>r2c1</name></member>
+    <member refid="d1/dfa/structsld_1_1mat3_1a5ac6c13ad852cc4d1cce17741a986966" kind="variable"><name>r2c2</name></member>
+    <member refid="d1/dfa/structsld_1_1mat3_1a00e1d6f7737dd302a3165f14051f9d27" kind="variable"><name></name></member>
+  </compound>
+  <compound refid="d4/dc7/structsld_1_1mat4" kind="struct"><name>sld::mat4</name>
+    <member refid="d4/dc7/structsld_1_1mat4_1a1e89e2cd076c1d61c05dd88d575613a2" kind="variable"><name>m</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1ace343c374960c58279510f62d128b189" kind="variable"><name>r0c0</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1ab59c9072d4955ac8e77c2dce9953f868" kind="variable"><name>r0c1</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1ac15cc3732a1181add15b09a73e104fe2" kind="variable"><name>r0c2</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1ac39fafe47c1acfa282de2a12a918883b" kind="variable"><name>r0c3</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1a65dbc7ce03f3bce8c0e20fc66bd4652b" kind="variable"><name>r1c0</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1a9d7c76c664bf5c19985f0b6fd830b8b3" kind="variable"><name>r1c1</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1a35a9bbd2763491e1776715c1cd12cb19" kind="variable"><name>r1c2</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1aa00f59bc727aacc0b8729f596ae517f1" kind="variable"><name>r1c3</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1aa33971cea7fbfd966085b32e4481241e" kind="variable"><name>r2c0</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1a097a72b87dbc00143ccdb06be907da09" kind="variable"><name>r2c1</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1a793e12470e3ef3aa12a70d96f60f7408" kind="variable"><name>r2c2</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1acc3e966473d9c9601453e99dd661c273" kind="variable"><name>r2c3</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1a114ffb12f96e8dcfd749b5a8ef18b5f5" kind="variable"><name>r3c0</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1a69d05b0a7aab645a1e6d3fd43d8b0c9f" kind="variable"><name>r3c1</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1aa72f0d0ab2c34ffdca53c515104f164e" kind="variable"><name>r3c2</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1a2202fb4591102399dd89e7e4328f0792" kind="variable"><name>r3c3</name></member>
+    <member refid="d4/dc7/structsld_1_1mat4_1aff5e559f56062f3a432ea0105c09d2e5" kind="variable"><name></name></member>
+  </compound>
+  <compound refid="db/dde/structsld_1_1quat" kind="struct"><name>sld::quat</name>
+    <member refid="db/dde/structsld_1_1quat_1aca2df592d4c1a9625e32a076cc306de2" kind="variable"><name>q</name></member>
+    <member refid="db/dde/structsld_1_1quat_1a73c3f5c45b082633c72254ece2fb3986" kind="variable"><name>x</name></member>
+    <member refid="db/dde/structsld_1_1quat_1a154ee0ab455139be9955c6781258d555" kind="variable"><name>y</name></member>
+    <member refid="db/dde/structsld_1_1quat_1abd5e4f43b697cb8c8ca7f8933a095b81" kind="variable"><name>z</name></member>
+    <member refid="db/dde/structsld_1_1quat_1a1d9e3511be3daa5379e672873a455b8e" kind="variable"><name>w</name></member>
+    <member refid="db/dde/structsld_1_1quat_1a93edc38b343e7c046e79f0c4ae862db1" kind="variable"><name></name></member>
+  </compound>
+  <compound refid="d2/d0f/structsld_1_1vec2" kind="struct"><name>sld::vec2</name>
+    <member refid="d2/d0f/structsld_1_1vec2_1ab242482950b2ba1f6dc0d3af4f98c168" kind="variable"><name>v</name></member>
+    <member refid="d2/d0f/structsld_1_1vec2_1a20b9f07f995bc794270d18df44662573" kind="variable"><name>x</name></member>
+    <member refid="d2/d0f/structsld_1_1vec2_1ac6c96d0ce507ac7835fbaab33b955530" kind="variable"><name>y</name></member>
+    <member refid="d2/d0f/structsld_1_1vec2_1a8d2c9743808ab065fef99f8a930a30fb" kind="variable"><name></name></member>
+  </compound>
+  <compound refid="da/df2/structsld_1_1vec3" kind="struct"><name>sld::vec3</name>
+    <member refid="da/df2/structsld_1_1vec3_1a15c1429079b1053e7b615bbdffcb562f" kind="variable"><name>v</name></member>
+    <member refid="da/df2/structsld_1_1vec3_1ad35a05d7ad9bae33165e098baeb71fdd" kind="variable"><name>x</name></member>
+    <member refid="da/df2/structsld_1_1vec3_1a0f100c4a5213438a52085f4cdc134cd7" kind="variable"><name>y</name></member>
+    <member refid="da/df2/structsld_1_1vec3_1a8dcc526856313fb4a23d0b4827a70e62" kind="variable"><name>z</name></member>
+    <member refid="da/df2/structsld_1_1vec3_1a7646749029e7494344a5d0d59b951e4f" kind="variable"><name></name></member>
+  </compound>
+  <compound refid="db/dcb/namespacesld" kind="namespace"><name>sld</name>
+    <member refid="d4/de8/sld-math_8hpp_1ac6c83aa12144134d9e08768ee0ef22d4" kind="function"><name>vec2_add</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1abf4fdc4b0ad075c5ec1bf6a5656405e8" kind="function"><name>vec2_subtract</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1ab3b9734488d3bb75e98bd6c389b1cbfb" kind="function"><name>vec2_project</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1af6a60a5daa52287a784a5766b645904e" kind="function"><name>vec2_reject</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1ac4b8beaf6284940b97b6469d0feb8249" kind="function"><name>vec2_scalar_multiply</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1add761509ce5f6c790d25ca168389af13" kind="function"><name>vec2_scalar_divide</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a355cdab925ae194671d2ec9c58e06221" kind="function"><name>vec2_dot</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a00979e167782e5669954fc2215a2f8fe" kind="function"><name>vec2_magnitude</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a8388780d1c1414e826eeba1cc29c8688" kind="function"><name>vec2_normalize</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1ae40493edde18e2a569e4109445c43011" kind="function"><name>vec3_add</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1acb995ee64e740c12ad0eaed25c31684a" kind="function"><name>vec3_subtract</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a3389ec73f8ca841e8ae405dabbb0022e" kind="function"><name>vec3_project</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a8434d03b472d32431188a85109abbda3" kind="function"><name>vec3_reject</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a419f95bee536b655ceb9268400e3a4af" kind="function"><name>vec3_cross</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a46a54cddd12b4f60de68961e52e275c9" kind="function"><name>vec3_scalar_multiply</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a3cd428b848c29d3f3e06419f493e0a22" kind="function"><name>vec3_scalar_divide</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a721afa82e9e9bb7b5c24b2752aab99cc" kind="function"><name>vec3_dot</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a5903dec4b99bc105b3fe5fb0b97c6c42" kind="function"><name>vec3_magnitude</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1ad6e2b9370fef4b526e03b89bb0a1bf3a" kind="function"><name>vec3_normalize</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a5647635a5a202dc923f6ff7365873bde" kind="function"><name>mat3_identity</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1ae14924fcceca9fceb2b389ec3b3f03a6" kind="function"><name>mat3_determinant</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a67236d06915e0afada230afd4ba731eb" kind="function"><name>mat3_transpose</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a67449515275ced53ea6f778f8becb019" kind="function"><name>mat3_invert</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a6fdccfcb4e354e3fd6ca392276557c39" kind="function"><name>mat3_multiply</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a0cbe0f055fdd4c99e767899e91463646" kind="function"><name>mat4_identity</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a5b693d87efcebf2bd3a63538772ed87b" kind="function"><name>mat4_determinant</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a5c41078568e80bfb2bb298565e9c5f09" kind="function"><name>mat4_transpose</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1aaa9a92998c4427f56a10ef10100d416b" kind="function"><name>mat4_invert</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a8534e0bd9c462cc16ca8bc848d190323" kind="function"><name>mat4_multiply</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1adbcc48c1c252a2e6bb763bdc905dcda1" kind="function"><name>rotate_vector</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a34bddac4f5b83d1bc12347824a138bfe" kind="function"><name>rotate_axis_x</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1afd910f7c76283a4882def10ee4122d21" kind="function"><name>rotate_axis_y</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1ad466222273d6bbdd6afa37cc84542344" kind="function"><name>rotate_axis_z</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1a8b7b2c0244ef3525cbec6ff1b6b3d493" kind="function"><name>scale_uniform</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1ac29511902b88b50054e2c0874bc0299e" kind="function"><name>scale_non_uniform</name></member>
+    <member refid="d4/de8/sld-math_8hpp_1ac3ade55ff0e616223b4157feea1044ba" kind="function"><name>translate</name></member>
+  </compound>
+  <compound refid="d4/de8/sld-math_8hpp" kind="file"><name>sld-math.hpp</name>
+    <member refid="d4/de8/sld-math_8hpp_1ad24d38b861c38bd9384020ecd22137ef" kind="define"><name>SLD_MATH_API</name></member>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,1361 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="db/dcb/namespacesld" kind="namespace" language="C++">
+    <compoundname>sld</compoundname>
+    <innerclass refid="d1/dfa/structsld_1_1mat3" prot="public">sld::mat3</innerclass>
+    <innerclass refid="d4/dc7/structsld_1_1mat4" prot="public">sld::mat4</innerclass>
+    <innerclass refid="db/dde/structsld_1_1quat" prot="public">sld::quat</innerclass>
+    <innerclass refid="d2/d0f/structsld_1_1vec2" prot="public">sld::vec2</innerclass>
+    <innerclass refid="da/df2/structsld_1_1vec3" prot="public">sld::vec3</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1ac6c83aa12144134d9e08768ee0ef22d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec2_add</definition>
+        <argsstring>(vec2 *o_c, const vec2 *i_a, const vec2 *i_b, const u32 i_count=1)</argsstring>
+        <name>vec2_add</name>
+        <qualifiedname>sld::vec2_add</qualifiedname>
+        <param>
+          <type><ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>o_c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_b</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Add 2D vector A to B. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o_c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input Vector A </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input Vector B </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input Vector count, default 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="39" column="5" declfile="include/sld-math.hpp" declline="39" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1abf4fdc4b0ad075c5ec1bf6a5656405e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec2_subtract</definition>
+        <argsstring>(vec2 *o_c, const vec2 *i_a, const vec2 *i_b, const u32 i_count=1)</argsstring>
+        <name>vec2_subtract</name>
+        <qualifiedname>sld::vec2_subtract</qualifiedname>
+        <param>
+          <type><ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>o_c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_b</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Subtract 2D vector b from a. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o_c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output 2D vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input 2D vector a </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input 2D vector b </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>count vectors, default = 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="53" column="5" declfile="include/sld-math.hpp" declline="53" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1ab3b9734488d3bb75e98bd6c389b1cbfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec2_project</definition>
+        <argsstring>(vec2 *o_c, const vec2 *i_a, const vec2 *i_b, const u32 i_count=1)</argsstring>
+        <name>vec2_project</name>
+        <qualifiedname>sld::vec2_project</qualifiedname>
+        <param>
+          <type><ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>o_c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_b</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Project 2D vector A onto B. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o_c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output 2D vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input 2D vector A </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input 2D vector B </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input 2D vector count, default 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="67" column="5" declfile="include/sld-math.hpp" declline="67" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1af6a60a5daa52287a784a5766b645904e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec2_reject</definition>
+        <argsstring>(vec2 *o_c, const vec2 *i_a, const vec2 *i_b, const u32 i_count=1)</argsstring>
+        <name>vec2_reject</name>
+        <qualifiedname>sld::vec2_reject</qualifiedname>
+        <param>
+          <type><ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>o_c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_b</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Reject 2D vector B from A. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o_c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output 2D vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input 2D vector A </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input 2D vector B </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input 2D vector count </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="81" column="5" declfile="include/sld-math.hpp" declline="81" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1ac4b8beaf6284940b97b6469d0feb8249" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec2_scalar_multiply</definition>
+        <argsstring>(vec2 *o_v, const vec2 *i_v, const f32 *i_s, const u32 i_count=1)</argsstring>
+        <name>vec2_scalar_multiply</name>
+        <qualifiedname>sld::vec2_scalar_multiply</qualifiedname>
+        <param>
+          <type><ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>o_v</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_v</declname>
+        </param>
+        <param>
+          <type>const f32 *</type>
+          <declname>i_s</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Multiply 2D vector by scalar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o_v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Result 2D Vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input 2D Vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input Scalar </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input 2D Vector count </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="95" column="5" declfile="include/sld-math.hpp" declline="95" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1add761509ce5f6c790d25ca168389af13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec2_scalar_divide</definition>
+        <argsstring>(vec2 *o_v, const vec2 *i_v, const f32 *i_s, const u32 i_count=1)</argsstring>
+        <name>vec2_scalar_divide</name>
+        <qualifiedname>sld::vec2_scalar_divide</qualifiedname>
+        <param>
+          <type><ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>o_v</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_v</declname>
+        </param>
+        <param>
+          <type>const f32 *</type>
+          <declname>i_s</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Divide 2D vector by scalar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o_v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output 2D vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input 2D vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input scalar </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input 2D Vector count </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="109" column="5" declfile="include/sld-math.hpp" declline="109" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a355cdab925ae194671d2ec9c58e06221" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec2_dot</definition>
+        <argsstring>(f32 *o_d, const vec2 *i_a, const vec2 *i_b, const u32 i_count=1)</argsstring>
+        <name>vec2_dot</name>
+        <qualifiedname>sld::vec2_dot</qualifiedname>
+        <param>
+          <type>f32 *</type>
+          <declname>o_d</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_b</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Dot product of 2D vectors A and B. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o_d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output dot product </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input vector A </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input vector B </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input vector count, default 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="123" column="5" declfile="include/sld-math.hpp" declline="123" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a00979e167782e5669954fc2215a2f8fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec2_magnitude</definition>
+        <argsstring>(f32 *o_m, const vec2 *i_v, const u32 i_count=1)</argsstring>
+        <name>vec2_magnitude</name>
+        <qualifiedname>sld::vec2_magnitude</qualifiedname>
+        <param>
+          <type>f32 *</type>
+          <declname>o_m</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_v</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>2D Vector magnitude </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o_m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output magnitude </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input 2D vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input 2D vector count </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="136" column="5" declfile="include/sld-math.hpp" declline="136" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a8388780d1c1414e826eeba1cc29c8688" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec2_normalize</definition>
+        <argsstring>(f32 *o_m, const vec2 *i_v, const u32 i_count=1)</argsstring>
+        <name>vec2_normalize</name>
+        <qualifiedname>sld::vec2_normalize</qualifiedname>
+        <param>
+          <type>f32 *</type>
+          <declname>o_m</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_v</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Normalize 2D vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o_m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output normalized 2D vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input 2D vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input 2D vector count </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="148" column="5" declfile="include/sld-math.hpp" declline="148" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1ae40493edde18e2a569e4109445c43011" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec3_add</definition>
+        <argsstring>(vec3 *o_c, const vec3 *i_a, const vec3 *i_b, const u32 i_count=1)</argsstring>
+        <name>vec3_add</name>
+        <qualifiedname>sld::vec3_add</qualifiedname>
+        <param>
+          <type><ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>o_c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>i_b</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="158" column="30" declfile="include/sld-math.hpp" declline="158" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1acb995ee64e740c12ad0eaed25c31684a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec3_subtract</definition>
+        <argsstring>(vec3 *o_c, const vec3 *i_a, const vec3 *i_b, const u32 i_count=1)</argsstring>
+        <name>vec3_subtract</name>
+        <qualifiedname>sld::vec3_subtract</qualifiedname>
+        <param>
+          <type><ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>o_c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>i_b</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="159" column="30" declfile="include/sld-math.hpp" declline="159" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a3389ec73f8ca841e8ae405dabbb0022e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec3_project</definition>
+        <argsstring>(vec3 *o_c, const vec2 *i_a, const vec3 *i_b, const u32 i_count=1)</argsstring>
+        <name>vec3_project</name>
+        <qualifiedname>sld::vec3_project</qualifiedname>
+        <param>
+          <type><ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>o_c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>i_b</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="160" column="30" declfile="include/sld-math.hpp" declline="160" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a8434d03b472d32431188a85109abbda3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec3_reject</definition>
+        <argsstring>(vec3 *o_c, const vec2 *i_a, const vec3 *i_b, const u32 i_count=1)</argsstring>
+        <name>vec3_reject</name>
+        <qualifiedname>sld::vec3_reject</qualifiedname>
+        <param>
+          <type><ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>o_c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>i_b</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="161" column="30" declfile="include/sld-math.hpp" declline="161" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a419f95bee536b655ceb9268400e3a4af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec3_cross</definition>
+        <argsstring>(vec3 *o_c, const vec3 *i_a, const vec3 *i_b, const u32 i_count=1)</argsstring>
+        <name>vec3_cross</name>
+        <qualifiedname>sld::vec3_cross</qualifiedname>
+        <param>
+          <type><ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>o_c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>i_b</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="162" column="30" declfile="include/sld-math.hpp" declline="162" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a46a54cddd12b4f60de68961e52e275c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec3_scalar_multiply</definition>
+        <argsstring>(vec3 *o_v, const vec3 *i_v, const f32 *i_s, const u32 i_count=1)</argsstring>
+        <name>vec3_scalar_multiply</name>
+        <qualifiedname>sld::vec3_scalar_multiply</qualifiedname>
+        <param>
+          <type><ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>o_v</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>i_v</declname>
+        </param>
+        <param>
+          <type>const f32 *</type>
+          <declname>i_s</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="163" column="30" declfile="include/sld-math.hpp" declline="163" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a3cd428b848c29d3f3e06419f493e0a22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec3_scalar_divide</definition>
+        <argsstring>(vec3 *o_v, const vec3 *i_v, const f32 *i_s, const u32 i_count=1)</argsstring>
+        <name>vec3_scalar_divide</name>
+        <qualifiedname>sld::vec3_scalar_divide</qualifiedname>
+        <param>
+          <type><ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>o_v</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>i_v</declname>
+        </param>
+        <param>
+          <type>const f32 *</type>
+          <declname>i_s</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="164" column="30" declfile="include/sld-math.hpp" declline="164" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a721afa82e9e9bb7b5c24b2752aab99cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec3_dot</definition>
+        <argsstring>(f32 *o_d, const vec3 *i_a, const vec2 *i_b, const u32 i_count=1)</argsstring>
+        <name>vec3_dot</name>
+        <qualifiedname>sld::vec3_dot</qualifiedname>
+        <param>
+          <type>f32 *</type>
+          <declname>o_d</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">vec2</ref> *</type>
+          <declname>i_b</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="165" column="30" declfile="include/sld-math.hpp" declline="165" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a5903dec4b99bc105b3fe5fb0b97c6c42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec3_magnitude</definition>
+        <argsstring>(f32 *o_m, const vec3 *i_v, const u32 i_count=1)</argsstring>
+        <name>vec3_magnitude</name>
+        <qualifiedname>sld::vec3_magnitude</qualifiedname>
+        <param>
+          <type>f32 *</type>
+          <declname>o_m</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>i_v</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="166" column="30" declfile="include/sld-math.hpp" declline="166" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1ad6e2b9370fef4b526e03b89bb0a1bf3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::vec3_normalize</definition>
+        <argsstring>(f32 *o_m, const vec3 *i_v, const u32 i_count=1)</argsstring>
+        <name>vec3_normalize</name>
+        <qualifiedname>sld::vec3_normalize</qualifiedname>
+        <param>
+          <type>f32 *</type>
+          <declname>o_m</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>i_v</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="167" column="30" declfile="include/sld-math.hpp" declline="167" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a5647635a5a202dc923f6ff7365873bde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API const <ref refid="d1/dfa/structsld_1_1mat3" kindref="compound">mat3</ref> &amp;</type>
+        <definition>SLD_MATH_API const mat3 &amp; sld::mat3_identity</definition>
+        <argsstring>(void)</argsstring>
+        <name>mat3_identity</name>
+        <qualifiedname>sld::mat3_identity</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="173" column="29" declfile="include/sld-math.hpp" declline="173" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1ae14924fcceca9fceb2b389ec3b3f03a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::mat3_determinant</definition>
+        <argsstring>(f32 *o_d, const mat3 *i_m, const u32 i_count=1)</argsstring>
+        <name>mat3_determinant</name>
+        <qualifiedname>sld::mat3_determinant</qualifiedname>
+        <param>
+          <type>f32 *</type>
+          <declname>o_d</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d1/dfa/structsld_1_1mat3" kindref="compound">mat3</ref> *</type>
+          <declname>i_m</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="174" column="30" declfile="include/sld-math.hpp" declline="174" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a67236d06915e0afada230afd4ba731eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::mat3_transpose</definition>
+        <argsstring>(mat3 *o_t, const mat3 *i_m, const u32 i_count=1)</argsstring>
+        <name>mat3_transpose</name>
+        <qualifiedname>sld::mat3_transpose</qualifiedname>
+        <param>
+          <type><ref refid="d1/dfa/structsld_1_1mat3" kindref="compound">mat3</ref> *</type>
+          <declname>o_t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d1/dfa/structsld_1_1mat3" kindref="compound">mat3</ref> *</type>
+          <declname>i_m</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="175" column="30" declfile="include/sld-math.hpp" declline="175" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a67449515275ced53ea6f778f8becb019" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::mat3_invert</definition>
+        <argsstring>(mat3 *o_t, const mat3 *i_m, const u32 i_count=1)</argsstring>
+        <name>mat3_invert</name>
+        <qualifiedname>sld::mat3_invert</qualifiedname>
+        <param>
+          <type><ref refid="d1/dfa/structsld_1_1mat3" kindref="compound">mat3</ref> *</type>
+          <declname>o_t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d1/dfa/structsld_1_1mat3" kindref="compound">mat3</ref> *</type>
+          <declname>i_m</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="176" column="30" declfile="include/sld-math.hpp" declline="176" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a6fdccfcb4e354e3fd6ca392276557c39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::mat3_multiply</definition>
+        <argsstring>(mat3 *o_c, const mat3 *i_a, const mat3 *i_b, const u32 i_count=1)</argsstring>
+        <name>mat3_multiply</name>
+        <qualifiedname>sld::mat3_multiply</qualifiedname>
+        <param>
+          <type><ref refid="d1/dfa/structsld_1_1mat3" kindref="compound">mat3</ref> *</type>
+          <declname>o_c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d1/dfa/structsld_1_1mat3" kindref="compound">mat3</ref> *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d1/dfa/structsld_1_1mat3" kindref="compound">mat3</ref> *</type>
+          <declname>i_b</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="177" column="30" declfile="include/sld-math.hpp" declline="177" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a0cbe0f055fdd4c99e767899e91463646" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API const <ref refid="d4/dc7/structsld_1_1mat4" kindref="compound">mat4</ref> &amp;</type>
+        <definition>SLD_MATH_API const mat4 &amp; sld::mat4_identity</definition>
+        <argsstring>(void)</argsstring>
+        <name>mat4_identity</name>
+        <qualifiedname>sld::mat4_identity</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="183" column="29" declfile="include/sld-math.hpp" declline="183" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a5b693d87efcebf2bd3a63538772ed87b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::mat4_determinant</definition>
+        <argsstring>(f32 *o_d, const mat4 *i_m, const u32 i_count=1)</argsstring>
+        <name>mat4_determinant</name>
+        <qualifiedname>sld::mat4_determinant</qualifiedname>
+        <param>
+          <type>f32 *</type>
+          <declname>o_d</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/dc7/structsld_1_1mat4" kindref="compound">mat4</ref> *</type>
+          <declname>i_m</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="184" column="30" declfile="include/sld-math.hpp" declline="184" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a5c41078568e80bfb2bb298565e9c5f09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::mat4_transpose</definition>
+        <argsstring>(mat4 *o_t, const mat4 *i_m, const u32 i_count=1)</argsstring>
+        <name>mat4_transpose</name>
+        <qualifiedname>sld::mat4_transpose</qualifiedname>
+        <param>
+          <type><ref refid="d4/dc7/structsld_1_1mat4" kindref="compound">mat4</ref> *</type>
+          <declname>o_t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/dc7/structsld_1_1mat4" kindref="compound">mat4</ref> *</type>
+          <declname>i_m</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="185" column="30" declfile="include/sld-math.hpp" declline="185" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1aaa9a92998c4427f56a10ef10100d416b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::mat4_invert</definition>
+        <argsstring>(mat4 *o_t, const mat4 *i_m, const u32 i_count=1)</argsstring>
+        <name>mat4_invert</name>
+        <qualifiedname>sld::mat4_invert</qualifiedname>
+        <param>
+          <type><ref refid="d4/dc7/structsld_1_1mat4" kindref="compound">mat4</ref> *</type>
+          <declname>o_t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/dc7/structsld_1_1mat4" kindref="compound">mat4</ref> *</type>
+          <declname>i_m</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="186" column="30" declfile="include/sld-math.hpp" declline="186" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a8534e0bd9c462cc16ca8bc848d190323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::mat4_multiply</definition>
+        <argsstring>(mat4 *o_c, const mat4 *i_a, const mat3 *i_b, const u32 i_count=1)</argsstring>
+        <name>mat4_multiply</name>
+        <qualifiedname>sld::mat4_multiply</qualifiedname>
+        <param>
+          <type><ref refid="d4/dc7/structsld_1_1mat4" kindref="compound">mat4</ref> *</type>
+          <declname>o_c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/dc7/structsld_1_1mat4" kindref="compound">mat4</ref> *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d1/dfa/structsld_1_1mat3" kindref="compound">mat3</ref> *</type>
+          <declname>i_b</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="187" column="30" declfile="include/sld-math.hpp" declline="187" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1adbcc48c1c252a2e6bb763bdc905dcda1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::rotate_vector</definition>
+        <argsstring>(mat4 *o_m, const f32 *i_a, const vec3 *i_v, const u32 i_count=1)</argsstring>
+        <name>rotate_vector</name>
+        <qualifiedname>sld::rotate_vector</qualifiedname>
+        <param>
+          <type><ref refid="d4/dc7/structsld_1_1mat4" kindref="compound">mat4</ref> *</type>
+          <declname>o_m</declname>
+        </param>
+        <param>
+          <type>const f32 *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>i_v</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="193" column="30" declfile="include/sld-math.hpp" declline="193" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a34bddac4f5b83d1bc12347824a138bfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::rotate_axis_x</definition>
+        <argsstring>(mat4 *o_m, const f32 *i_a, const u32 i_count=1)</argsstring>
+        <name>rotate_axis_x</name>
+        <qualifiedname>sld::rotate_axis_x</qualifiedname>
+        <param>
+          <type><ref refid="d4/dc7/structsld_1_1mat4" kindref="compound">mat4</ref> *</type>
+          <declname>o_m</declname>
+        </param>
+        <param>
+          <type>const f32 *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="194" column="30" declfile="include/sld-math.hpp" declline="194" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1afd910f7c76283a4882def10ee4122d21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::rotate_axis_y</definition>
+        <argsstring>(mat4 *o_m, const f32 *i_a, const u32 i_count=1)</argsstring>
+        <name>rotate_axis_y</name>
+        <qualifiedname>sld::rotate_axis_y</qualifiedname>
+        <param>
+          <type><ref refid="d4/dc7/structsld_1_1mat4" kindref="compound">mat4</ref> *</type>
+          <declname>o_m</declname>
+        </param>
+        <param>
+          <type>const f32 *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="195" column="30" declfile="include/sld-math.hpp" declline="195" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1ad466222273d6bbdd6afa37cc84542344" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::rotate_axis_z</definition>
+        <argsstring>(mat4 *o_m, const f32 *i_a, const u32 i_count=1)</argsstring>
+        <name>rotate_axis_z</name>
+        <qualifiedname>sld::rotate_axis_z</qualifiedname>
+        <param>
+          <type><ref refid="d4/dc7/structsld_1_1mat4" kindref="compound">mat4</ref> *</type>
+          <declname>o_m</declname>
+        </param>
+        <param>
+          <type>const f32 *</type>
+          <declname>i_a</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="196" column="30" declfile="include/sld-math.hpp" declline="196" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1a8b7b2c0244ef3525cbec6ff1b6b3d493" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::scale_uniform</definition>
+        <argsstring>(mat4 *o_m, const f32 *i_s, const u32 i_count=1)</argsstring>
+        <name>scale_uniform</name>
+        <qualifiedname>sld::scale_uniform</qualifiedname>
+        <param>
+          <type><ref refid="d4/dc7/structsld_1_1mat4" kindref="compound">mat4</ref> *</type>
+          <declname>o_m</declname>
+        </param>
+        <param>
+          <type>const f32 *</type>
+          <declname>i_s</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="197" column="30" declfile="include/sld-math.hpp" declline="197" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1ac29511902b88b50054e2c0874bc0299e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::scale_non_uniform</definition>
+        <argsstring>(mat4 *o_m, const vec3 *i_s, const u32 i_count=1)</argsstring>
+        <name>scale_non_uniform</name>
+        <qualifiedname>sld::scale_non_uniform</qualifiedname>
+        <param>
+          <type><ref refid="d4/dc7/structsld_1_1mat4" kindref="compound">mat4</ref> *</type>
+          <declname>o_m</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>i_s</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="198" column="30" declfile="include/sld-math.hpp" declline="198" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/de8/sld-math_8hpp_1ac3ade55ff0e616223b4157feea1044ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SLD_MATH_API void</type>
+        <definition>SLD_MATH_API void sld::translate</definition>
+        <argsstring>(mat4 *o_m, const vec3 *i_p, const u32 i_count=1)</argsstring>
+        <name>translate</name>
+        <qualifiedname>sld::translate</qualifiedname>
+        <param>
+          <type><ref refid="d4/dc7/structsld_1_1mat4" kindref="compound">mat4</ref> *</type>
+          <declname>o_m</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/df2/structsld_1_1vec3" kindref="compound">vec3</ref> *</type>
+          <declname>i_p</declname>
+        </param>
+        <param>
+          <type>const u32</type>
+          <declname>i_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="199" column="30" declfile="include/sld-math.hpp" declline="199" declcolumn="30"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/sld-math.hpp" line="16" column="1"/>
+  </compounddef>
+</doxygen>

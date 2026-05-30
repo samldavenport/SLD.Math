@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="db/dde/structsld_1_1quat" kind="struct" language="C++" prot="public">
+    <compoundname>sld::quat</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="db/dde/structsld_1_1quat_1aca2df592d4c1a9625e32a076cc306de2" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::quat::q[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>q</name>
+        <qualifiedname>sld::quat::q</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="269" column="17" bodyfile="include/sld-math.hpp" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dde/structsld_1_1quat_1a73c3f5c45b082633c72254ece2fb3986" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::quat::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>sld::quat::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="271" column="21" bodyfile="include/sld-math.hpp" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dde/structsld_1_1quat_1a154ee0ab455139be9955c6781258d555" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::quat::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>sld::quat::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="272" column="21" bodyfile="include/sld-math.hpp" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dde/structsld_1_1quat_1abd5e4f43b697cb8c8ca7f8933a095b81" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::quat::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <qualifiedname>sld::quat::z</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="273" column="21" bodyfile="include/sld-math.hpp" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dde/structsld_1_1quat_1a1d9e3511be3daa5379e672873a455b8e" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::quat::w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <qualifiedname>sld::quat::w</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="274" column="21" bodyfile="include/sld-math.hpp" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dde/structsld_1_1quat_1a93edc38b343e7c046e79f0c4ae862db1" prot="public" static="no" mutable="no">
+        <type>union <ref refid="db/dde/structsld_1_1quat" kindref="compound">sld::quat</ref></type>
+        <definition>union sld::quat sld::quat</definition>
+        <argsstring></argsstring>
+        <name></name>
+        <qualifiedname>sld::quat</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="276" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/sld-math.hpp" line="267" column="5" bodyfile="include/sld-math.hpp" bodystart="267" bodyend="277"/>
+    <listofallmembers>
+      <member refid="db/dde/structsld_1_1quat_1aca2df592d4c1a9625e32a076cc306de2" prot="public" virt="non-virtual"><scope>sld::quat</scope><name>q</name></member>
+      <member refid="db/dde/structsld_1_1quat_1a1d9e3511be3daa5379e672873a455b8e" prot="public" virt="non-virtual"><scope>sld::quat</scope><name>w</name></member>
+      <member refid="db/dde/structsld_1_1quat_1a73c3f5c45b082633c72254ece2fb3986" prot="public" virt="non-virtual"><scope>sld::quat</scope><name>x</name></member>
+      <member refid="db/dde/structsld_1_1quat_1a154ee0ab455139be9955c6781258d555" prot="public" virt="non-virtual"><scope>sld::quat</scope><name>y</name></member>
+      <member refid="db/dde/structsld_1_1quat_1abd5e4f43b697cb8c8ca7f8933a095b81" prot="public" virt="non-virtual"><scope>sld::quat</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

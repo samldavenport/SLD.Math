@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="d2/d0f/structsld_1_1vec2" kind="struct" language="C++" prot="public">
+    <compoundname>sld::vec2</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d2/d0f/structsld_1_1vec2_1ab242482950b2ba1f6dc0d3af4f98c168" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::vec2::v[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>v</name>
+        <qualifiedname>sld::vec2::v</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="207" column="17" bodyfile="include/sld-math.hpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d0f/structsld_1_1vec2_1a20b9f07f995bc794270d18df44662573" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::vec2::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>sld::vec2::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="209" column="21" bodyfile="include/sld-math.hpp" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d0f/structsld_1_1vec2_1ac6c96d0ce507ac7835fbaab33b955530" prot="public" static="no" mutable="no">
+        <type>f32</type>
+        <definition>f32 sld::vec2::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>sld::vec2::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="210" column="21" bodyfile="include/sld-math.hpp" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d0f/structsld_1_1vec2_1a8d2c9743808ab065fef99f8a930a30fb" prot="public" static="no" mutable="no">
+        <type>union <ref refid="d2/d0f/structsld_1_1vec2" kindref="compound">sld::vec2</ref></type>
+        <definition>union sld::vec2 sld::vec2</definition>
+        <argsstring></argsstring>
+        <name></name>
+        <qualifiedname>sld::vec2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/sld-math.hpp" line="212" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/sld-math.hpp" line="205" column="5" bodyfile="include/sld-math.hpp" bodystart="205" bodyend="213"/>
+    <listofallmembers>
+      <member refid="d2/d0f/structsld_1_1vec2_1ab242482950b2ba1f6dc0d3af4f98c168" prot="public" virt="non-virtual"><scope>sld::vec2</scope><name>v</name></member>
+      <member refid="d2/d0f/structsld_1_1vec2_1a20b9f07f995bc794270d18df44662573" prot="public" virt="non-virtual"><scope>sld::vec2</scope><name>x</name></member>
+      <member refid="d2/d0f/structsld_1_1vec2_1ac6c96d0ce507ac7835fbaab33b955530" prot="public" virt="non-virtual"><scope>sld::vec2</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

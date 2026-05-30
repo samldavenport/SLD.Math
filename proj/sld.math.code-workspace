@@ -9,5 +9,7 @@
 			"path": "../SLD.Core"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "SLD.Math"
+	}
 }
