@@ -142,11 +142,11 @@ namespace sld {
               ++index) {
 
                 const vec2& v  = i_v  [index];            
-                const vec2& s  = i_s  [index];            
+                const f32&  s  = i_s  [index];            
                 vec2&       sv = o_sv [index];            
         
-                c.x = s * v.x; 
-                c.y = s * v.y;
+                sv.x = s * v.x; 
+                sv.y = s * v.y;
         }
     }
 
@@ -170,20 +170,20 @@ namespace sld {
               ++index) {
 
                 const vec2& v     = i_v    [index];            
-                const vec2& s     = i_s    [index];            
+                const f32&  s     = i_s    [index];            
                 vec2&       sv    = o_sv  [index];            
 
                 assert(s != 0);
                 const f32   s_inv = (1 / s); 
                 
-                c.x = s_inv * v.x; 
-                c.y = s_inv * v.y;
+                sv.x = s_inv * v.x; 
+                sv.y = s_inv * v.y;
         }
     }
 
     SLD_MATH_API void
     vec2_dot(
-        f32*        o_d
+        f32*        o_d,
         const vec2* i_a, 
         const vec2* i_b,
         const u32   i_count) {
@@ -202,10 +202,10 @@ namespace sld {
 
                 const vec2& a = i_a  [index];            
                 const vec2& b = i_b  [index];            
-                vec2&       d = o_sv [index];            
+                f32&        d = o_d [index];            
 
                 d = (
-                    (a.x * b.x) + (a.y * b.y);
+                    (a.x * b.x) + (a.y * b.y)
                 );
         }
     }
@@ -257,7 +257,7 @@ namespace sld {
                 const vec2& v     = i_v  [index];            
                 vec2&       vn    = o_vn [index];            
                 const u32   m     = sqrtf(powf(v.x, 2.0f) + powf(v.y, 2.0f));
-                const uf32  m_inv = (1.0f / m);
+                const f32   m_inv = (1.0f / m);
                 vn.x              = (m_inv * v.x);        
                 vn.y              = (m_inv * v.y);        
         }

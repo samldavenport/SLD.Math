@@ -161,7 +161,7 @@ namespace sld {
     SLD_MATH_API void vec3_cross           (vec3* o_c, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
     SLD_MATH_API void vec3_scalar_multiply (vec3* o_v, const vec3* i_v, const f32*  i_s, const u32 i_count = 1);
     SLD_MATH_API void vec3_scalar_divide   (vec3* o_v, const vec3* i_v, const f32*  i_s, const u32 i_count = 1);
-    SLD_MATH_API void vec3_dot             (f32*  o_d, const vec3* i_a, const vec2* i_b, const u32 i_count = 1);
+    SLD_MATH_API void vec3_dot             (f32*  o_d, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
     SLD_MATH_API void vec3_magnitude       (f32*  o_m, const vec3* i_v,                  const u32 i_count = 1);
     SLD_MATH_API void vec3_normalize       (f32*  o_m, const vec3* i_v,                  const u32 i_count = 1);
 
@@ -222,6 +222,18 @@ namespace sld {
         };
     };
 
+    struct vec4 {
+        union {
+            f32 v[4];
+            struct {
+                f32 x;
+                f32 y;
+                f32 z;
+                f32 w;
+            };
+        };
+    };
+
     struct mat3 {
         union {
             f32 m[9];
@@ -235,6 +247,11 @@ namespace sld {
                 f32 r2c0;
                 f32 r2c1;
                 f32 r2c2;
+            };
+            struct {
+                vec3 r0;
+                vec3 r1;
+                vec3 r2;
             };
         };
     };
@@ -259,6 +276,12 @@ namespace sld {
                 f32 r3c1;
                 f32 r3c2;
                 f32 r3c3;
+            };
+            struct {
+                vec4 r0;
+                vec4 r1;
+                vec4 r2;
+                vec4 r3;
             };
         };
     };

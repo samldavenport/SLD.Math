@@ -18,7 +18,6 @@ namespace sld {
 
             mat4& m = o_m[index];
             
-                
             // row 0
             m.r0c0  = 1.0f; 
             m.r0c1  = 0.0f;
@@ -42,14 +41,39 @@ namespace sld {
             m.r3c1 = 0.0f;
             m.r3c2 = 0.0f;
             m.r3c3 = 1.0f;
-
         }
     }
 
-    // SLD_MATH_API void        mat4_determinant     (f32*  o_d, const mat4* i_m,                  const u32 i_count = 1);
-    // SLD_MATH_API void        mat4_transpose       (mat4* o_t, const mat4* i_m,                  const u32 i_count = 1);
-    // SLD_MATH_API void        mat4_invert          (mat4* o_t, const mat4* i_m,                  const u32 i_count = 1);
-    // SLD_MATH_API void        mat4_multiply        (mat4* o_c, const mat4* i_a, const mat3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void
+    mat4_determinant(
+        f32*        o_d,
+        const mat4* i_m,
+        const u32   i_count) {
 
+    }
 
+    SLD_MATH_API void
+    mat4_transpose(
+        mat4*       o_t,
+        const mat4* i_m,
+        const u32   i_count) {
+
+    }
+    
+    SLD_MATH_API void
+    mat4_invert(
+        mat4*       o_t,
+        const mat4* i_m,
+        const u32   i_count) {
+
+    }
+
+    SLD_MATH_API void
+    mat4_multiply(
+        mat4*       o_c,
+        const mat4* i_a,
+        const mat3* i_b,
+        const u32   i_count) {
+
+    }
 };
