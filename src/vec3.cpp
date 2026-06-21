@@ -243,6 +243,65 @@ namespace sld {
         }
     }
 
+
+    SLD_MATH_API void
+    vec3_transform_mat3(
+        vec3*       o_t,
+        const vec3* i_v,
+        const mat3* i_m,
+        const u32   i_count) {
+
+        assert(
+            o_t     != NULL && 
+            i_v     != NULL && 
+            i_m     != NULL && 
+            i_count != 0         
+        );
+
+        for (
+            u32 index = 0;
+                index < i_count;
+              ++index) {
+
+            vec3&       t = o_t[index];
+            const vec3& v = i_v[index];
+            const mat3& m = i_m[index];
+        
+            t.x = (m.r0c0 * v.x) + (m.r0c1 * v.y) + (m.r0c2 * v.z);  
+            t.y = (m.r1c0 * v.x) + (m.r1c1 * v.y) + (m.r1c2 * v.z); 
+            t.z = (m.r2c0 * v.x) + (m.r2c1 * v.y) + (m.r2c2 * v.z); 
+        }
+    }
+
+    SLD_MATH_API void
+    vec3_transform_mat4(
+        vec3*       o_t,
+        const vec3* i_v,
+        const mat4* i_m,
+        const u32   i_count) {
+
+        assert(
+            o_t     != NULL && 
+            i_v     != NULL && 
+            i_m     != NULL && 
+            i_count != 0         
+        );
+
+        for (
+            u32 index = 0;
+                index < i_count;
+              ++index) {
+
+            vec3&       t = o_t[index];
+            const vec3& v = i_v[index];
+            const mat4& m = i_m[index];
+        
+            t.x = (m.r0c0 * v.x) + (m.r0c1 * v.y) + (m.r0c2 * v.z);  
+            t.y = (m.r1c0 * v.x) + (m.r1c1 * v.y) + (m.r1c2 * v.z); 
+            t.z = (m.r2c0 * v.x) + (m.r2c1 * v.y) + (m.r2c2 * v.z); 
+        }
+    }
+
     SLD_MATH_API void
     vec3_magnitude(
         f32*        o_m,
