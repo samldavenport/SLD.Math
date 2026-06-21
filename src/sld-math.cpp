@@ -1,7 +1,5 @@
 #pragma once
 
-#include "vec2.cpp"
-#include "vec3.cpp"
-#include "mat3.cpp"
+#define SLD_MATH_DLL_EXPORT
+
 #include "mat4.cpp"
-#include "quat.cpp"
