@@ -198,14 +198,14 @@ namespace sld {
     // TRANSFORMS 
     //--------------------------------------------------------------------
 
-    SLD_MATH_API void rotate_vector        (mat4* o_m, const f32*  i_a, const vec3* i_v,           const u32 i_count = 1);
-    SLD_MATH_API void rotate_axis_x        (mat4* o_m, const f32*  i_a,                            const u32 i_count = 1);
-    SLD_MATH_API void rotate_axis_y        (mat4* o_m, const f32*  i_a,                            const u32 i_count = 1);
-    SLD_MATH_API void rotate_axis_z        (mat4* o_m, const f32*  i_a,                            const u32 i_count = 1);
-    SLD_MATH_API void scale_uniform        (mat4* o_m, const f32*  i_s,                            const u32 i_count = 1);
-    SLD_MATH_API void scale_non_uniform    (mat4* o_m, const vec3* i_s,                            const u32 i_count = 1);
-    SLD_MATH_API void translate            (mat4* o_m, const vec3* i_p,                            const u32 i_count = 1);
-    SLD_MATH_API void look_at              (mat4* o_m, const vec3* i_origin, const vec3* i_target, const u32 i_count = 1);
+    SLD_MATH_API void xform_rotate_vector        (mat4* o_xform, const f32*  i_a, const vec3* i_v,           const u32 i_count = 1);
+    SLD_MATH_API void xform_rotate_axis_x        (mat4* o_xform, const f32*  i_a,                            const u32 i_count = 1);
+    SLD_MATH_API void xform_rotate_axis_y        (mat4* o_xform, const f32*  i_a,                            const u32 i_count = 1);
+    SLD_MATH_API void xform_rotate_axis_z        (mat4* o_xform, const f32*  i_a,                            const u32 i_count = 1);
+    SLD_MATH_API void xform_scale_uniform        (mat4* o_xform, const f32*  i_s,                            const u32 i_count = 1);
+    SLD_MATH_API void xform_scale_non_uniform    (mat4* o_xform, const vec3* i_s,                            const u32 i_count = 1);
+    SLD_MATH_API void xform_translate            (mat4* o_xform, const vec3* i_p,                            const u32 i_count = 1);
+    SLD_MATH_API void xform_look_at              (mat4* o_xform, const vec3* i_origin, const vec3* i_target, const u32 i_count = 1);
 
     //--------------------------------------------------------------------
     // DEFINITIONS 

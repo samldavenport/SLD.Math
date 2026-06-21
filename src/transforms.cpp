@@ -5,7 +5,7 @@
 namespace sld {
 
     SLD_MATH_API void
-    look_at(
+    xform_look_at(
         mat4*       o_xform,
         const vec3* i_origin,
         const vec3* i_target,
