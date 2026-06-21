@@ -13,7 +13,7 @@ $OutFiles = [PSCustomObject]@{
 
 $CompileArgs = [PSCustomObject]@{
     Compiler = "cl.exe"
-    In       = "src/sld-math.cpp"
+    In       = "src\sld-math.cpp"
     Out      = "/Fo:" + $OutFiles.Obj
     Include  = @(
         "/Isrc"
@@ -32,6 +32,28 @@ $CompileArgs = [PSCustomObject]@{
     ) -join " "    
 }
 
+$LinkArgs = [PSCustomObject]@{
+    Linker = "link.exe"
+    In     = @(
+        "SLD.Math.obj"
+        "user32.lib"
+    ) -join " "
+    Out = @(
+        "/OUT:build\debug\bin\SLD.Math.dll"
+        "/IMPLIB:build\debug\lib\SLD.Math.lib"
+    ) -join " "
+    Include = @(
+        "/LIBPATH:build\debug\obj"
+        "/LIBPATH:build\debug\lib"
+        "/LIBPATH:vcpkg_installed/x64-windows/lib"
+    ) -join " "
+    Flags = @(
+        "/nologo"
+        "/SUBSYSTEM:WINDOWS"
+        "/DEBUG"
+        "/DLL"
+    ) -join " "
+}
 
 $Expressions = [PSCustomObject]@{
     Compile = @(
@@ -41,6 +63,18 @@ $Expressions = [PSCustomObject]@{
         $CompileArgs.Include
         $CompileArgs.Flags
     ) -join " "
+    Link = @(
+        $LinkArgs.Linker
+        $LinkArgs.In
+        $LinkArgs.Out
+        $LinkArgs.Include
+        $LinkArgs.Flags
+    ) -join " "
 }
 
+$null = New-Item -ItemType Directory -Path $OutDirs.Bin -Force
+$null = New-Item -ItemType Directory -Path $OutDirs.Obj -Force
+$null = New-Item -ItemType Directory -Path $OutDirs.Lib -Force
+
 Invoke-Expression $Expressions.Compile
+Invoke-Expression $Expressions.Link

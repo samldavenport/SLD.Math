@@ -8,7 +8,7 @@
 				"${workspaceFolder}/scripts/Build-Debug.ps1",
 			],
 			"options": {
-				"cwd": "${workspaceFolder}/scripts"
+				"cwd": "${workspaceFolder}"
 			},
 			"problemMatcher": [
 				"$msCompile"
