@@ -4,38 +4,46 @@
 
 namespace sld {
 
-
-    SLD_MATH_API const mat4&
+    SLD_MATH_API void
     mat4_identity(
-        void) {
+        mat4* o_m,
+        const u32 i_count) {
 
-        static mat4 mat;
+        assert(o_m != NULL && i_count != 0);
 
-        // row 0
-        mat.m[0]  = 1.0f; 
-        mat.m[1]  = 0.0f;
-        mat.m[2]  = 0.0f;
-        mat.m[3]  = 0.0f;
+        for (
+            u32 index = 0;
+                index < i_count;
+              ++index) {
 
-        // row 1
-        mat.m[4]  = 0.0f; 
-        mat.m[5]  = 1.0f;
-        mat.m[6]  = 0.0f;
-        mat.m[7]  = 0.0f;
+            mat4& m = o_m[index];
+            
+                
+            // row 0
+            m.r0c0  = 1.0f; 
+            m.r0c1  = 0.0f;
+            m.r0c2  = 0.0f;
+            m.r0c3  = 0.0f;
 
-        // row 2
-        mat.m[8]  = 0.0f; 
-        mat.m[9]  = 0.0f;
-        mat.m[10] = 1.0f;
-        mat.m[11] = 0.0f;
+            // row 1
+            m.r1c0  = 0.0f; 
+            m.r1c1  = 1.0f;
+            m.r1c2  = 0.0f;
+            m.r1c3  = 0.0f;
 
-        // row 3
-        mat.m[12] = 0.0f; 
-        mat.m[13] = 0.0f;
-        mat.m[14] = 0.0f;
-        mat.m[15] = 1.0f;
+            // row 2
+            m.r2c0 = 0.0f; 
+            m.r2c1 = 0.0f;
+            m.r2c2 = 1.0f;
+            m.r2c3 = 0.0f;
 
-        return(mat);
+            // row 3
+            m.r3c0 = 0.0f; 
+            m.r3c1 = 0.0f;
+            m.r3c2 = 0.0f;
+            m.r3c3 = 1.0f;
+
+        }
     }
 
     // SLD_MATH_API void        mat4_determinant     (f32*  o_d, const mat4* i_m,                  const u32 i_count = 1);
