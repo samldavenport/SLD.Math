@@ -179,11 +179,11 @@ namespace sld {
     // MATRIX 4 
     //--------------------------------------------------------------------
 
-    SLD_MATH_API const mat4& mat4_identity        (void);
-    SLD_MATH_API void        mat4_determinant     (f32*  o_d, const mat4* i_m,                  const u32 i_count = 1);
-    SLD_MATH_API void        mat4_transpose       (mat4* o_t, const mat4* i_m,                  const u32 i_count = 1);
-    SLD_MATH_API void        mat4_invert          (mat4* o_t, const mat4* i_m,                  const u32 i_count = 1);
-    SLD_MATH_API void        mat4_multiply        (mat4* o_c, const mat4* i_a, const mat3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void mat4_identity        (mat4* o_m, const i_count = 1);
+    SLD_MATH_API void mat4_determinant     (f32*  o_d, const mat4* i_m,                  const u32 i_count = 1);
+    SLD_MATH_API void mat4_transpose       (mat4* o_t, const mat4* i_m,                  const u32 i_count = 1);
+    SLD_MATH_API void mat4_invert          (mat4* o_t, const mat4* i_m,                  const u32 i_count = 1);
+    SLD_MATH_API void mat4_multiply        (mat4* o_c, const mat4* i_a, const mat3* i_b, const u32 i_count = 1);
 
     //--------------------------------------------------------------------
     // TRANSFORMS 
