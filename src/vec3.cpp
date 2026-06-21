@@ -231,15 +231,15 @@ namespace sld {
                 index < i_count;
               ++index) {
 
-                const vec3& a = i_a [index];            
-                const vec3& b = i_b [index];            
-                f32&        d = o_d [index];            
+            const vec3& a = i_a [index];            
+            const vec3& b = i_b [index];            
+            f32&        d = o_d [index];            
 
-                d = (
-                    (a.x * b.x) +
-                    (a.y * b.y) +
-                    (a.z * b.z)
-                );
+            d = (
+                (a.x * b.x) +
+                (a.y * b.y) +
+                (a.z * b.z)
+            );
         }
     }
 
@@ -319,14 +319,14 @@ namespace sld {
                 index < i_count;
               ++index) {
 
-                const vec3& v = i_v [index];            
-                f32&        m = o_m [index];            
+            const vec3& v = i_v [index];            
+            f32&        m = o_m [index];            
 
-                m = sqrtf(
-                    powf(v.x, 2.0f) +
-                    powf(v.y, 2.0f) +
-                    powf(v.z, 2.0f)
-                );
+            m = sqrtf(
+                powf(v.x, 2.0f) +
+                powf(v.y, 2.0f) +
+                powf(v.z, 2.0f)
+            );
         }
     }
 
@@ -347,13 +347,13 @@ namespace sld {
                 index < i_count;
               ++index) {
 
-                const vec3& v     = i_v  [index];            
-                vec3&       vn    = o_vn [index];            
-                const u32   m     = sqrtf(powf(v.x, 2.0f) + powf(v.y, 2.0f));
-                const f32   m_inv = (1.0f / m);
-                vn.x              = (m_inv * v.x);        
-                vn.y              = (m_inv * v.y);        
-                vn.z              = (m_inv * v.z);        
+            const vec3& v     = i_v  [index];            
+            vec3&       vn    = o_vn [index];            
+            const u32   m     = sqrtf(powf(v.x, 2.0f) + powf(v.y, 2.0f));
+            const f32   m_inv = (1.0f / m);
+            vn.x              = (m_inv * v.x);        
+            vn.y              = (m_inv * v.y);        
+            vn.z              = (m_inv * v.z);        
         }
     }
 };
