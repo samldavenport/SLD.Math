@@ -33,7 +33,7 @@ namespace sld {
     }
 
     SLD_MATH_API void
-    vec3_sub(
+    vec3_subtract(
         vec3*       o_c, 
         const vec3* i_a, 
         const vec3* i_b,

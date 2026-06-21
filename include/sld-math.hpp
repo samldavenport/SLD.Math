@@ -25,6 +25,13 @@ namespace sld {
     struct quat;
 
     //--------------------------------------------------------------------
+    // CONTEXT
+    //--------------------------------------------------------------------
+
+    SLD_MATH_API void        math_set_global_up (const vec3* up);
+    SLD_MATH_API const vec3* math_get_global_up (void);
+
+    //--------------------------------------------------------------------
     // VECTOR 2 
     //--------------------------------------------------------------------
     
@@ -165,7 +172,7 @@ namespace sld {
     SLD_MATH_API void vec3_transform_mat3  (vec3* o_t, const vec3* i_v, const mat3* i_m, const u32 i_count = 1);
     SLD_MATH_API void vec3_transform_mat4  (vec3* o_t, const vec3* i_v, const mat4* i_m, const u32 i_count = 1);
     SLD_MATH_API void vec3_magnitude       (f32*  o_m, const vec3* i_v,                  const u32 i_count = 1);
-    SLD_MATH_API void vec3_normalize       (f32*  o_m, const vec3* i_v,                  const u32 i_count = 1);
+    SLD_MATH_API void vec3_normalize       (vec3* o_v, const vec3* i_v,                  const u32 i_count = 1);
 
     //--------------------------------------------------------------------
     // MATRIX 3 
@@ -191,13 +198,14 @@ namespace sld {
     // TRANSFORMS 
     //--------------------------------------------------------------------
 
-    SLD_MATH_API void rotate_vector        (mat4* o_m, const f32*  i_a, const vec3* i_v, const u32 i_count = 1);
-    SLD_MATH_API void rotate_axis_x        (mat4* o_m, const f32*  i_a,                  const u32 i_count = 1);
-    SLD_MATH_API void rotate_axis_y        (mat4* o_m, const f32*  i_a,                  const u32 i_count = 1);
-    SLD_MATH_API void rotate_axis_z        (mat4* o_m, const f32*  i_a,                  const u32 i_count = 1);
-    SLD_MATH_API void scale_uniform        (mat4* o_m, const f32*  i_s,                  const u32 i_count = 1);
-    SLD_MATH_API void scale_non_uniform    (mat4* o_m, const vec3* i_s,                  const u32 i_count = 1);
-    SLD_MATH_API void translate            (mat4* o_m, const vec3* i_p,                  const u32 i_count = 1);
+    SLD_MATH_API void rotate_vector        (mat4* o_m, const f32*  i_a, const vec3* i_v,           const u32 i_count = 1);
+    SLD_MATH_API void rotate_axis_x        (mat4* o_m, const f32*  i_a,                            const u32 i_count = 1);
+    SLD_MATH_API void rotate_axis_y        (mat4* o_m, const f32*  i_a,                            const u32 i_count = 1);
+    SLD_MATH_API void rotate_axis_z        (mat4* o_m, const f32*  i_a,                            const u32 i_count = 1);
+    SLD_MATH_API void scale_uniform        (mat4* o_m, const f32*  i_s,                            const u32 i_count = 1);
+    SLD_MATH_API void scale_non_uniform    (mat4* o_m, const vec3* i_s,                            const u32 i_count = 1);
+    SLD_MATH_API void translate            (mat4* o_m, const vec3* i_p,                            const u32 i_count = 1);
+    SLD_MATH_API void look_at              (mat4* o_m, const vec3* i_origin, const vec3* i_target, const u32 i_count = 1);
 
     //--------------------------------------------------------------------
     // DEFINITIONS 
@@ -222,6 +230,22 @@ namespace sld {
                 f32 z;
             };
         };
+
+        vec3(
+            const f32 x,
+            const f32 y,
+            const f32 z) {
+
+            this->x = x;
+            this->y = y;
+            this->z = z;
+        }
+
+        vec3(void) {
+            this->x = 0;
+            this->y = 0;
+            this->z = 0;
+        } 
     };
 
     struct vec4 {
