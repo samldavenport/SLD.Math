@@ -2,7 +2,6 @@
 #define SLD_MATH_HPP
 
 #include <math.h>
-#include <sld.hpp>
 
 #ifdef SLD_MATH_STATIC
 #   define SLD_MATH_API
@@ -23,6 +22,7 @@ namespace sld {
     struct mat3;
     struct mat4;
     struct quat;
+    struct look_at;
 
     //--------------------------------------------------------------------
     // CONTEXT
@@ -328,6 +328,20 @@ namespace sld {
             };
         };
     };
+
+    struct xform_look_at {
+        struct {
+            vec3 origin;
+            vec3 target;
+        } in;
+        struct {
+            vec3 forward;
+            vec3 up;
+            vec3 right;
+            mat4 look_at;
+            mat4 view;
+        } out;
+    }
 };
 
 #endif //SLD_MATH_HPP
