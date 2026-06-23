@@ -2,6 +2,7 @@
 #define SLD_MATH_HPP
 
 #include <math.h>
+#include <sld.hpp>
 
 #ifdef SLD_MATH_STATIC
 #   define SLD_MATH_API
@@ -22,7 +23,6 @@ namespace sld {
     struct mat3;
     struct mat4;
     struct quat;
-    struct look_at;
 
     //--------------------------------------------------------------------
     // CONTEXT
@@ -161,21 +161,18 @@ namespace sld {
     // VECTOR 3 
     //--------------------------------------------------------------------
 
-    SLD_MATH_API void vec3_add             (vec3* o_c, const vec3* i_a, const vec3* i_b,            const u32 i_count = 1);
-    SLD_MATH_API void vec3_subtract        (vec3* o_c, const vec3* i_a, const vec3* i_b,            const u32 i_count = 1);
-    SLD_MATH_API void vec3_project         (vec3* o_c, const vec2* i_a, const vec3* i_b,            const u32 i_count = 1);
-    SLD_MATH_API void vec3_reject          (vec3* o_c, const vec2* i_a, const vec3* i_b,            const u32 i_count = 1);
-    SLD_MATH_API void vec3_cross           (vec3* o_c, const vec3* i_a, const vec3* i_b,            const u32 i_count = 1);
-    SLD_MATH_API void vec3_scalar_multiply (vec3* o_v, const vec3* i_v, const f32*  i_s,            const u32 i_count = 1);
-    SLD_MATH_API void vec3_scalar_divide   (vec3* o_v, const vec3* i_v, const f32*  i_s,            const u32 i_count = 1);
-    SLD_MATH_API void vec3_dot             (f32*  o_d, const vec3* i_a, const vec3* i_b,            const u32 i_count = 1);
-    SLD_MATH_API void vec3_transform_mat3  (vec3* o_t, const vec3* i_v, const mat3* i_m,            const u32 i_count = 1);
-    SLD_MATH_API void vec3_transform_mat4  (vec3* o_t, const vec3* i_v, const mat4* i_m,            const u32 i_count = 1);
-    SLD_MATH_API void vec3_magnitude       (f32*  o_m, const vec3* i_v,                             const u32 i_count = 1);
-    SLD_MATH_API void vec3_normalize       (vec3* o_v, const vec3* i_v,                             const u32 i_count = 1);
-    SLD_MATH_API void vec3_forward         (vec3* o_forward, const vec3* i_from, const vec3* i_to,  const u32 i_count = 1);
-    SLD_MATH_API void vec3_right           (vec3* o_right,   const vec3* i_forward,                 const u32 i_count = 1);
-    SLD_MATH_API void vec3_up              (vec3* o_up, const vec3* i_forward, const vec3* i_right, const u32 i_count = 1);
+    SLD_MATH_API void vec3_add             (vec3* o_c, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void vec3_subtract        (vec3* o_c, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void vec3_project         (vec3* o_c, const vec2* i_a, const vec3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void vec3_reject          (vec3* o_c, const vec2* i_a, const vec3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void vec3_cross           (vec3* o_c, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void vec3_scalar_multiply (vec3* o_v, const vec3* i_v, const f32*  i_s, const u32 i_count = 1);
+    SLD_MATH_API void vec3_scalar_divide   (vec3* o_v, const vec3* i_v, const f32*  i_s, const u32 i_count = 1);
+    SLD_MATH_API void vec3_dot             (f32*  o_d, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void vec3_transform_mat3  (vec3* o_t, const vec3* i_v, const mat3* i_m, const u32 i_count = 1);
+    SLD_MATH_API void vec3_transform_mat4  (vec3* o_t, const vec3* i_v, const mat4* i_m, const u32 i_count = 1);
+    SLD_MATH_API void vec3_magnitude       (f32*  o_m, const vec3* i_v,                  const u32 i_count = 1);
+    SLD_MATH_API void vec3_normalize       (vec3* o_v, const vec3* i_v,                  const u32 i_count = 1);
 
     //--------------------------------------------------------------------
     // MATRIX 3 
@@ -328,20 +325,6 @@ namespace sld {
             };
         };
     };
-
-    struct xform_look_at {
-        struct {
-            vec3 origin;
-            vec3 target;
-        } in;
-        struct {
-            vec3 forward;
-            vec3 up;
-            vec3 right;
-            mat4 look_at;
-            mat4 view;
-        } out;
-    }
 };
 
 #endif //SLD_MATH_HPP
