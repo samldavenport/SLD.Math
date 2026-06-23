@@ -355,5 +355,19 @@ namespace sld {
             vn.y              = (m_inv * v.y);        
             vn.z              = (m_inv * v.z);        
         }
+
+    SLD_MATH_API void
+    vec3_forward(
+        vec3*       o_forward,
+        const vec3* i_from,
+        const vec3* i_to,
+        const u32   i_count) {
+
+    }
+
+    SLD_MATH_API void vec3_right
+    (vec3* o_right,   const vec3* i_forward,                 const u32 i_count = 1);
+    SLD_MATH_API void vec3_up              (vec3* o_up, const vec3* i_forward, const vec3* i_right, const u32 i_count = 1);
+
     }
 };
