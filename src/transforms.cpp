@@ -5,73 +5,45 @@
 namespace sld {
 
     SLD_MATH_API void
-    xform_look_at(
-        mat4*       o_xform,
-        const vec3* i_origin,
-        const vec3* i_target,
-        const u32   i_count) {
+    xform_view_look_at(
+        view&       o_view,
+        const vec3& i_origin,
+        const vec3& i_target) {
 
-        assert(
-            o_xform  != NULL &&
-            i_origin != NULL &&
-            i_target != NULL &&
-            i_count  != 0
-        );
+        const vec3& global_up = math_get_global_up();
 
-        const vec3* global_up = math_get_global_up();
+        // forward
+        vec3_subtract  (&o_view.forward, &i_origin, &i_target);
+        o_view.forward.normalize();
+
+        // right
+        vec3_cross (&o_view.right, &global_up, &o_view.forward);
+        o_view.right.normalize();
         
-        vec3 forward;
-        vec3 up;
-        vec3 right;
+        // up
+        vec3_cross(&o_view.up, &o_view.forward, &o_view.right);
+        o_view.up.normalize();
 
-        f32 translate_x;
-        f32 translate_y;
-        f32 translate_z;
+        // translation
+        vec3_dot(&o_view.translation.x, &i_origin, &i_target);
+        vec3_dot(&o_view.translation.y, &i_origin, &i_target);
+        vec3_dot(&o_view.translation.z, &i_origin, &i_target);
 
-        for (
-            u32 index = 0;
-                index < i_count;
-              ++index) {
-
-            mat4&       xform  = o_xform  [index];
-            const vec3& origin = i_origin [index];
-            const vec3& target = i_target [index];            
-
-            // forward
-            vec3_subtract  (&forward, &origin, &target);
-            vec3_normalize (&forward, &forward);
-
-            // right
-            vec3_cross     (&right, global_up, &forward);
-            vec3_normalize (&right, &right);
-
-            // up
-            vec3_cross     (&up, &forward, &right);
-            vec3_normalize (&up, &up);
-
-            // translation
-            vec3_dot(&translate_x, &origin, &target);
-            vec3_dot(&translate_y, &origin, &target);
-            vec3_dot(&translate_z, &origin, &target);
-
-            // look at transform
-            xform.r0c0 = right.x;
-            xform.r0c1 = up.x;
-            xform.r0c2 = forward.x;
-            xform.r0c3 = 0.0f;
-            xform.r1c0 = right.y;
-            xform.r1c1 = up.y;
-            xform.r1c2 = forward.y;
-            xform.r1c3 = 0.0f;
-            xform.r2c0 = right.z;
-            xform.r2c1 = up.z;
-            xform.r2c3 = forward.z;
-            xform.r3c0 = -translate_x;
-            xform.r3c1 = -translate_y;
-            xform.r3c2 = -translate_z;
-            xform.r3c3 = 1.0f;
-        }
-
-        
+        // look at transform
+        o_view.xform.r0c0 = o_view.right.x;
+        o_view.xform.r0c1 = o_view.up.x;
+        o_view.xform.r0c2 = o_view.forward.x;
+        o_view.xform.r0c3 = 0.0f;
+        o_view.xform.r1c0 = o_view.right.y;
+        o_view.xform.r1c1 = o_view.up.y;
+        o_view.xform.r1c2 = o_view.forward.y;
+        o_view.xform.r1c3 = 0.0f;
+        o_view.xform.r2c0 = o_view.right.z;
+        o_view.xform.r2c1 = o_view.up.z;
+        o_view.xform.r2c3 = o_view.forward.z;
+        o_view.xform.r3c0 = -o_view.translation.x;
+        o_view.xform.r3c1 = -o_view.translation.y;
+        o_view.xform.r3c2 = -o_view.translation.z;
+        o_view.xform.r3c3 = 1.0f;
     }
 };

@@ -14,19 +14,15 @@ namespace sld {
 
     SLD_MATH_API void
     math_set_global_up(
-        const vec3* up) {
+        const vec3& up) {
 
-        assert(up);
-
-        _global_up.x = up->x;
-        _global_up.y = up->y;
-        _global_up.z = up->z;
+        _global_up = up;
     }
         
-    SLD_MATH_API const vec3*
+    SLD_MATH_API const vec3&
     math_get_global_up(
         void) {
 
-        return(&_global_up);
+        return(_global_up);
     }
 };

@@ -23,13 +23,14 @@ namespace sld {
     struct mat3;
     struct mat4;
     struct quat;
+    struct view;
 
     //--------------------------------------------------------------------
     // CONTEXT
     //--------------------------------------------------------------------
 
-    SLD_MATH_API void        math_set_global_up (const vec3* up);
-    SLD_MATH_API const vec3* math_get_global_up (void);
+    SLD_MATH_API void        math_set_global_up (const vec3& up);
+    SLD_MATH_API const vec3& math_get_global_up (void);
 
     //--------------------------------------------------------------------
     // VECTOR 2 
@@ -205,7 +206,7 @@ namespace sld {
     SLD_MATH_API void xform_scale_uniform            (mat4* o_xform, const f32*  i_s,                            const u32 i_count = 1);
     SLD_MATH_API void xform_scale_non_uniform        (mat4* o_xform, const vec3* i_s,                            const u32 i_count = 1);
     SLD_MATH_API void xform_translate                (mat4* o_xform, const vec3* i_p,                            const u32 i_count = 1);
-    SLD_MATH_API void xform_look_at                  (mat4* o_xform, const vec3* i_origin, const vec3* i_target, const u32 i_count = 1);
+    SLD_MATH_API void xform_view_look_at             (view* o_view,  const vec3* i_origin, const vec3* i_target);
     SLD_MATH_API void xform_project_near_to_far      (mat4* o_xform, const f32   i_aspect_ratio, const f32 i_fov_radians, const f32 i_near, const f32 i_far, const u32 i_count = 1);
     SLD_MATH_API void xform_project_near_to_infinite (mat4* o_xform, const f32   i_aspect_ratio, const f32 i_fov_radians, const f32 i_near, const u32 i_count = 1);
 
@@ -247,7 +248,52 @@ namespace sld {
             this->x = 0;
             this->y = 0;
             this->z = 0;
-        } 
+        }
+
+        inline f32
+        magnitude(void) {
+            const f32 m = sqrtf(
+                powf(x, 2.0f) +
+                powf(y, 2.0f) +
+                powf(z, 2.0f)
+            );
+            return(m);
+        }
+
+        inline void
+        normalize(void) {
+            const u32 m      = magnitude(); 
+            const f32 m_inv  = (1.0f / m);
+            x               *= m_inv;
+            y               *= m_inv;
+            z               *= m_inv;
+        }
+
+        inline void
+        add(const vec3& other) {
+            x += other.x;
+            y += other.y;
+            z += other.z;
+        }
+
+        inline void
+        subtract(const vec3& other) {
+            x -= other.x;
+            y -= other.y;
+            z -= other.z;
+        }
+
+        inline void
+        dot(const vec3& other) {
+
+        }
+
+        inline void
+        cross (const vec3& other) {
+            x = (y * other.z) - (z * other.y);
+            y = (z * other.x) - (x * other.z);
+            z = (x * other.y) - (y * other.x);
+        }
     };
 
     struct vec4 {
@@ -324,6 +370,14 @@ namespace sld {
                 f32 w;
             };
         };
+    };
+
+    struct view {
+        vec3 forward;
+        vec3 right;
+        vec3 up;
+        vec3 translation;
+        mat4 xform;
     };
 };
 
