@@ -328,6 +328,30 @@ namespace sld {
                 vec3 r2;
             };
         };
+
+        inline mat3(void) {
+            r0c0 = 1.0f;
+            r0c1 = 0.0f; 
+            r0c2 = 0.0f; 
+            r1c0 = 0.0f;
+            r1c1 = 1.0f;
+            r1c2 = 0.0f;
+            r2c0 = 0.0f;
+            r2c1 = 0.0f;
+            r2c2 = 1.0f;           
+        }
+
+        inline identity(void) {
+            r0c0 = 1.0f;
+            r0c1 = 0.0f; 
+            r0c2 = 0.0f; 
+            r1c0 = 0.0f;
+            r1c1 = 1.0f;
+            r1c2 = 0.0f;
+            r2c0 = 0.0f;
+            r2c1 = 0.0f;
+            r2c2 = 1.0f;            
+        }
     };
 
     struct mat4 {
@@ -358,6 +382,44 @@ namespace sld {
                 vec4 r3;
             };
         };
+
+        inline mat4(void) {
+            r0c0 = 1.0f;
+            r0c1 = 0.0f;
+            r0c2 = 0.0f;
+            r0c3 = 0.0f;
+            r1c0 = 0.0f;
+            r1c1 = 1.0f;
+            r1c2 = 0.0f;
+            r1c3 = 0.0f;
+            r2c0 = 0.0f;
+            r2c1 = 0.0f;
+            r2c2 = 1.0f;
+            r2c3 = 0.0f;
+            r3c0 = 0.0f;
+            r3c1 = 0.0f;
+            r3c2 = 0.0f;
+            r3c3 = 1.0f;
+        }
+
+        inline identity(void) {
+            r0c0 = 1.0f;
+            r0c1 = 0.0f;
+            r0c2 = 0.0f;
+            r0c3 = 0.0f;
+            r1c0 = 0.0f;
+            r1c1 = 1.0f;
+            r1c2 = 0.0f;
+            r1c3 = 0.0f;
+            r2c0 = 0.0f;
+            r2c1 = 0.0f;
+            r2c2 = 1.0f;
+            r2c3 = 0.0f;
+            r3c0 = 0.0f;
+            r3c1 = 0.0f;
+            r3c2 = 0.0f;
+            r3c3 = 1.0f;            
+        }
     };
 
     struct quat {
