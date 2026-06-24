@@ -256,7 +256,7 @@ namespace sld {
 
                 const vec2& v     = i_v  [index];            
                 vec2&       vn    = o_vn [index];            
-                const u32   m     = sqrtf(powf(v.x, 2.0f) + powf(v.y, 2.0f));
+                const f32   m     = sqrtf(powf(v.x, 2.0f) + powf(v.y, 2.0f));
                 const f32   m_inv = (1.0f / m);
                 vn.x              = (m_inv * v.x);        
                 vn.y              = (m_inv * v.y);        

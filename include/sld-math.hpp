@@ -252,17 +252,30 @@ namespace sld {
 
         inline f32
         magnitude(void) {
-            const f32 m = sqrtf(
-                powf(x, 2.0f) +
-                powf(y, 2.0f) +
-                powf(z, 2.0f)
+
+            const f32 x_pow_2 = powf(x, 2.0f); 
+            const f32 y_pow_2 = powf(y, 2.0f); 
+            const f32 z_pow_2 = powf(z, 2.0f); 
+
+            assert(
+                x_pow_2 >= 0.0f &&
+                y_pow_2 >= 0.0f &&
+                z_pow_2 >= 0.0f
             );
+
+            const f32 sum = (
+                x_pow_2 +
+                y_pow_2 +
+                z_pow_2
+            );
+
+            const f32 m = sqrtf(sum);
             return(m);
         }
 
         inline void
         normalize(void) {
-            const u32 m      = magnitude(); 
+            const f32 m      = magnitude(); 
             const f32 m_inv  = (1.0f / m);
             x               *= m_inv;
             y               *= m_inv;
