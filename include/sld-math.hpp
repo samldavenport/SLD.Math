@@ -341,7 +341,8 @@ namespace sld {
             r2c2 = 1.0f;           
         }
 
-        inline identity(void) {
+        inline void
+        identity(void) {
             r0c0 = 1.0f;
             r0c1 = 0.0f; 
             r0c2 = 0.0f; 
@@ -402,7 +403,8 @@ namespace sld {
             r3c3 = 1.0f;
         }
 
-        inline identity(void) {
+        inline void 
+        identity(void) {
             r0c0 = 1.0f;
             r0c1 = 0.0f;
             r0c2 = 0.0f;
@@ -434,12 +436,82 @@ namespace sld {
         };
     };
 
-    struct view {
-        vec3 forward;
-        vec3 right;
-        vec3 up;
-        vec3 translation;
-        mat4 xform;
+    struct view : mat4 {
+
+        inline void
+        forward(vec3& f) {
+            f.x = -r0c2;
+            f.y = -r1c2;
+            f.z = -r2c2;
+        }
+
+        inline void
+        right(vec3& r) {
+            r.x = r0c0;
+            r.y = r1c0;
+            r.z = r2c0;
+        }
+
+        inline void
+        up(vec3& u) {
+            u.x = r0c1;
+            u.y = r1c1;
+            u.z = r2c1;
+        }
+
+        inline void
+        origin(vec3& o) {
+            o.x = r0c3;
+            o.y = r1c3;
+            o.z = r2c3;
+        }
+
+        inline void
+        look_at(
+            const vec3& origin,
+            const vec3& target) {
+
+            const vec3& global_up = math_get_global_up();
+
+            vec3 forward;
+            vec3 right;
+            vec3 up;
+            vec3 translation;
+
+            // forward
+            vec3_subtract(&forward, &origin, &target);
+            forward.normalize();
+
+            // right
+            vec3_cross (&right, &global_up, &forward);
+            right.normalize();
+            
+            // up
+            vec3_cross(&up, &forward, &right);
+            up.normalize();
+
+            // translation
+            vec3_dot(&translation.x, &origin, &target);
+            vec3_dot(&translation.y, &origin, &target);
+            vec3_dot(&translation.z, &origin, &target);
+
+            // look at transform
+            r0c0 = right.x;
+            r0c1 = up.x;
+            r0c2 = forward.x;
+            r0c3 = 0.0f;
+            r1c0 = right.y;
+            r1c1 = up.y;
+            r1c2 = forward.y;
+            r1c3 = 0.0f;
+            r2c0 = right.z;
+            r2c1 = up.z;
+            r2c3 = forward.z;
+            r3c0 = -translation.x;
+            r3c1 = -translation.y;
+            r3c2 = -translation.z;
+            r3c3 = 1.0f;
+        } 
     };
 };
 
