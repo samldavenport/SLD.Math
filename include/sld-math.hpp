@@ -547,13 +547,43 @@ namespace sld {
     struct proj : mat4 {
 
         inline void
-        near_to_far() {
+        near_to_far(
+            const f32 fov_radians,
+            const f32 aspect_ratio,
+            const f32 clip_near,
+            const f32 clip_far) {
 
+            const f32 fov_half     = fov * 0.5f;
+            const f32 tan_fov_half = tanf(fov_half);
+            const f32 far_sub_near = clip_far - clip_near;
+
+            identity();
+
+            r0c0 = 1.0f / (aspect_ratio * tan_fov_half);
+            r1c1 = 1.0f / tan_fov_half;
+            r2c2 = -(clip_far + clip_near)        / far_sub_near;
+            r2c3 = -(2.0f * clip_far * clip_near) / far_sub_near;
+            r3c2 = -1.0f;
+            r3c3 = 0.0f;
         }
 
         inline void
-        near_to_infinite() {
+        near_to_infinite(
+            const f32 fov_radians,
+            const f32 aspect_ratio,
+            const f32 clip_near) {
 
+            const f32 fov_half     = fov * 0.5f;
+            const f32 tan_fov_half = tanf(fov_half);
+
+            identity();
+
+            r0c0 =  1.0f / (aspect_ratio * tan_fov_half);
+            r1c1 =  1.0f / tan_fov_half;
+            r2c2 = -1.0f
+            r2c3 = -2.0f * clip_near;
+            r3c2 = -1.0f;
+            r3c3 = 0.0f;
         }
     };
 };
