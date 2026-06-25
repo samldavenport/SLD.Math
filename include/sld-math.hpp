@@ -186,6 +186,20 @@ namespace sld {
     // VECTOR 3 
     //--------------------------------------------------------------------
 
+    // reference methods
+    SLD_MATH_API vec3 vec3_add             (const vec3& a, const vec3& b);
+    SLD_MATH_API vec3 vec3_subtract        (const vec3& a, const vec3& b);
+    SLD_MATH_API vec3 vec3_project         (const vec3& a, const vec3& b);
+    SLD_MATH_API vec3 vec3_reject          (const vec3& a, const vec3& b);
+    SLD_MATH_API vec3 vec3_cross           (const vec3& a, const vec3& b);
+    SLD_MATH_API vec3 vec3_transform       (const vec3& v, const mat3& m);
+    SLD_MATH_API vec3 vec3_scalar_multiply (const vec3& v, const f32   s);
+    SLD_MATH_API vec3 vec3_scalar_divide   (const vec3& v, const f32   s);
+    SLD_MATH_API f32  vec3_dot             (const vec3& a, const vec3& b);
+    SLD_MATH_API f32  vec3_magnitude       (const vec3& v);
+    SLD_MATH_API vec3 vec3_normalize       (const vec3& v);
+
+    // pointer methods
     SLD_MATH_API void vec3_add             (vec3* o_c, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
     SLD_MATH_API void vec3_subtract        (vec3* o_c, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
     SLD_MATH_API void vec3_project         (vec3* o_c, const vec2* i_a, const vec3* i_b, const u32 i_count = 1);
@@ -203,11 +217,17 @@ namespace sld {
     // MATRIX 3 
     //--------------------------------------------------------------------
 
-    SLD_MATH_API void mat3_identity        (mat3* o_m, const u32 i_count = 1);
-    SLD_MATH_API void mat3_determinant     (f32*  o_d, const mat3* i_m,                  const u32 i_count = 1);
-    SLD_MATH_API void mat3_transpose       (mat3* o_t, const mat3* i_m,                  const u32 i_count = 1);
-    SLD_MATH_API void mat3_invert          (mat3* o_t, const mat3* i_m,                  const u32 i_count = 1);
-    SLD_MATH_API void mat3_multiply        (mat3* o_c, const mat3* i_a, const mat3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void mat3_identity        (mat3& m);
+    SLD_MATH_API void mat3_transpose       (mat3& mt, const mat3& m);
+    SLD_MATH_API void mat3_invert          (mat3& mi, const mat3& m);
+    SLD_MATH_API void mat3_multiply        (mat3& mm, const mat3& a, const mat3* b);
+    SLD_MATH_API f32  mat3_determinant     (const mat3& m);
+
+    SLD_MATH_API void mat3_identity        (mat3* m,                                 const u32 i_count = 1);
+    SLD_MATH_API void mat3_transpose       (mat3* mt, const mat3*  m,                const u32 i_count = 1);
+    SLD_MATH_API void mat3_invert          (mat3* mt, const mat3*  m,                const u32 i_count = 1);
+    SLD_MATH_API void mat3_multiply        (mat3* mm, const mat3*  a, const mat3* b, const u32 i_count = 1);
+    SLD_MATH_API void mat3_determinant     (f32*  o_d, const mat3* m,                const u32 i_count = 1);
 
     //--------------------------------------------------------------------
     // MATRIX 4 
@@ -223,19 +243,20 @@ namespace sld {
     // TRANSFORMS 
     //--------------------------------------------------------------------
 
-    SLD_MATH_API void xform_rotate_vector            (xform* o_xform, const f32*  i_a, const vec3* i_v,           const u32 i_count = 1);
-    SLD_MATH_API void xform_rotate_axis_x            (xform* o_xform, const f32*  i_a,                            const u32 i_count = 1);
-    SLD_MATH_API void xform_rotate_axis_y            (xform* o_xform, const f32*  i_a,                            const u32 i_count = 1);
-    SLD_MATH_API void xform_rotate_axis_z            (xform* o_xform, const f32*  i_a,                            const u32 i_count = 1);
-    SLD_MATH_API void xform_scale_uniform            (xform* o_xform, const f32*  i_s,                            const u32 i_count = 1);
-    SLD_MATH_API void xform_scale_non_uniform        (xform* o_xform, const vec3* i_s,                            const u32 i_count = 1);
-    SLD_MATH_API void xform_translate                (xform* o_xform, const vec3* i_p,                            const u32 i_count = 1);
-    SLD_MATH_API void xform_view_look_at             (view* o_view,  const vec3* i_origin, const vec3* i_target);
-    SLD_MATH_API void xform_project_near_to_far      (proj* o_xform, const f32   i_aspect_ratio, const f32 i_fov_radians, const f32 i_near, const f32 i_far, const u32 i_count = 1);
-    SLD_MATH_API void xform_project_near_to_infinite (proj* o_xform, const f32   i_aspect_ratio, const f32 i_fov_radians, const f32 i_near, const u32 i_count = 1);
+    SLD_MATH_API mat4 xform_translate     (const vec3& t);
+    SLD_MATH_API mat4 xform_scale         (const vec3& s);
+    SLD_MATH_API mat4 xform_rotate_vector (const vec3& r, const f32 rad);
+    SLD_MATH_API mat4 xform_rotate_axis_x (const f32 rad);
+    SLD_MATH_API mat4 xform_rotate_axis_y (const f32 rad);
+    SLD_MATH_API mat4 xform_rotate_axis_z (const f32 rad);
+    SLD_MATH_API mat4 xform_view_look_at  (const vec3& origin, const vec3& target);
+    SLD_MATH_API vec3 xform_view_forward  (const mat4& m);
+    SLD_MATH_API vec3 xform_view_right    (const mat4& m);
+    SLD_MATH_API vec3 xform_view_up       (const mat4& m);
+    SLD_MATH_API vec3 xform_view_origin   (const mat4& m);
 
     //--------------------------------------------------------------------
-    // INLINE METHODS
+    // TRIGONOMETRY
     //--------------------------------------------------------------------
 
     inline f32 trig_degrees_to_radians (const f32 d) { return(d * RADIANS_FACTOR); }
@@ -264,80 +285,6 @@ namespace sld {
                 f32 z;
             };
         };
-
-        vec3(
-            const f32 x,
-            const f32 y,
-            const f32 z) {
-
-            this->x = x;
-            this->y = y;
-            this->z = z;
-        }
-
-        vec3(void) {
-            this->x = 0;
-            this->y = 0;
-            this->z = 0;
-        }
-
-        inline f32
-        magnitude(void) {
-
-            const f32 x_pow_2 = powf(x, 2.0f); 
-            const f32 y_pow_2 = powf(y, 2.0f); 
-            const f32 z_pow_2 = powf(z, 2.0f); 
-
-            assert(
-                x_pow_2 >= 0.0f &&
-                y_pow_2 >= 0.0f &&
-                z_pow_2 >= 0.0f
-            );
-
-            const f32 sum = (
-                x_pow_2 +
-                y_pow_2 +
-                z_pow_2
-            );
-
-            const f32 m = sqrtf(sum);
-            return(m);
-        }
-
-        inline void
-        normalize(void) {
-            const f32 m      = magnitude(); 
-            const f32 m_inv  = (1.0f / m);
-            x               *= m_inv;
-            y               *= m_inv;
-            z               *= m_inv;
-        }
-
-        inline void
-        add(const vec3& other) {
-            x += other.x;
-            y += other.y;
-            z += other.z;
-        }
-
-        inline void
-        subtract(const vec3& other) {
-            x -= other.x;
-            y -= other.y;
-            z -= other.z;
-        }
-
-        inline void
-        dot(const vec3& other) {
-
-        }
-
-        inline void
-        cross (const vec3& other) {
-            x = (y * other.z) - (z * other.y);
-            y = (z * other.x) - (x * other.z);
-            z = (x * other.y) - (y * other.x);
-        }
     };
 
     struct vec4 {
@@ -372,31 +319,6 @@ namespace sld {
                 vec3 r2;
             };
         };
-
-        inline mat3(void) {
-            r0c0 = 1.0f;
-            r0c1 = 0.0f; 
-            r0c2 = 0.0f; 
-            r1c0 = 0.0f;
-            r1c1 = 1.0f;
-            r1c2 = 0.0f;
-            r2c0 = 0.0f;
-            r2c1 = 0.0f;
-            r2c2 = 1.0f;           
-        }
-
-        inline void
-        identity(void) {
-            r0c0 = 1.0f;
-            r0c1 = 0.0f; 
-            r0c2 = 0.0f; 
-            r1c0 = 0.0f;
-            r1c1 = 1.0f;
-            r1c2 = 0.0f;
-            r2c0 = 0.0f;
-            r2c1 = 0.0f;
-            r2c2 = 1.0f;            
-        }
     };
 
     struct mat4 {
@@ -427,45 +349,6 @@ namespace sld {
                 vec4 r3;
             };
         };
-
-        inline mat4(void) {
-            r0c0 = 1.0f;
-            r0c1 = 0.0f;
-            r0c2 = 0.0f;
-            r0c3 = 0.0f;
-            r1c0 = 0.0f;
-            r1c1 = 1.0f;
-            r1c2 = 0.0f;
-            r1c3 = 0.0f;
-            r2c0 = 0.0f;
-            r2c1 = 0.0f;
-            r2c2 = 1.0f;
-            r2c3 = 0.0f;
-            r3c0 = 0.0f;
-            r3c1 = 0.0f;
-            r3c2 = 0.0f;
-            r3c3 = 1.0f;
-        }
-
-        inline void 
-        identity(void) {
-            r0c0 = 1.0f;
-            r0c1 = 0.0f;
-            r0c2 = 0.0f;
-            r0c3 = 0.0f;
-            r1c0 = 0.0f;
-            r1c1 = 1.0f;
-            r1c2 = 0.0f;
-            r1c3 = 0.0f;
-            r2c0 = 0.0f;
-            r2c1 = 0.0f;
-            r2c2 = 1.0f;
-            r2c3 = 0.0f;
-            r3c0 = 0.0f;
-            r3c1 = 0.0f;
-            r3c2 = 0.0f;
-            r3c3 = 1.0f;            
-        }
     };
 
     struct quat {
@@ -479,6 +362,7 @@ namespace sld {
             };
         };
     };
+
 
     struct view : mat4 {
 
@@ -517,27 +401,27 @@ namespace sld {
 
             const vec3& global_up = math_get_global_up();
 
-            vec3 forward;
-            vec3 right;
-            vec3 up;
-            vec3 translation;
+            vec3 forward     = {0.0f, 0.0f, 0.0f};
+            vec3 right       = {0.0f, 0.0f, 0.0f};
+            vec3 up          = {0.0f, 0.0f, 0.0f};
+            vec3 translation = {0.0f, 0.0f, 0.0f};
 
             // forward
-            vec3_subtract(&forward, &origin, &target);
-            forward.normalize();
+            forward = vec3_subtract  (origin,target);
+            forward = vec3_normalize (forward);
 
             // right
-            vec3_cross (&right, &global_up, &forward);
-            right.normalize();
+            right = vec3_cross     (global_up, forward);
+            right = vec3_normalize (right);
             
             // up
-            vec3_cross(&up, &forward, &right);
-            up.normalize();
+            up = vec3_cross     (forward, right);
+            up = vec3_normalize (up);
 
             // translation
-            vec3_dot(&translation.x, &origin, &target);
-            vec3_dot(&translation.y, &origin, &target);
-            vec3_dot(&translation.z, &origin, &target);
+            translation.x = vec3_dot(origin, target);
+            translation.y = vec3_dot(origin, target);
+            translation.z = vec3_dot(origin, target);
 
             // look at transform
             r0c0 = right.x;
