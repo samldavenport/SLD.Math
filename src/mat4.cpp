@@ -72,7 +72,7 @@ namespace sld {
     mat4_multiply(
         mat4*       o_c,
         const mat4* i_a,
-        const mat3* i_b,
+        const mat4* i_b,
         const u32   i_count) {
 
     }

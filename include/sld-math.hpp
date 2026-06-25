@@ -21,6 +21,14 @@
 namespace sld {
 
     //--------------------------------------------------------------------
+    // CONSTANTS
+    //--------------------------------------------------------------------
+
+    constexpr f32 PI_32          = 3.1415926535f;
+    constexpr f32 RADIANS_FACTOR = (PI_32 / 180.0f);
+    constexpr f32 DEGREES_FACTOR = (180.f / PI_32);
+
+    //--------------------------------------------------------------------
     // STRUCTURED TYPES
     //--------------------------------------------------------------------
 
@@ -226,6 +234,12 @@ namespace sld {
     SLD_MATH_API void xform_project_near_to_far      (proj* o_xform, const f32   i_aspect_ratio, const f32 i_fov_radians, const f32 i_near, const f32 i_far, const u32 i_count = 1);
     SLD_MATH_API void xform_project_near_to_infinite (proj* o_xform, const f32   i_aspect_ratio, const f32 i_fov_radians, const f32 i_near, const u32 i_count = 1);
 
+    //--------------------------------------------------------------------
+    // INLINE METHODS
+    //--------------------------------------------------------------------
+
+    inline f32 trig_degrees_to_radians (const f32 d) { return(d * RADIANS_FACTOR); }
+    inline f32 trig_radians_to_degrees (const f32 r) { return(r * DEGREES_FACTOR); }
 
     //--------------------------------------------------------------------
     // DEFINITIONS 
@@ -553,7 +567,7 @@ namespace sld {
             const f32 clip_near,
             const f32 clip_far) {
 
-            const f32 fov_half     = fov * 0.5f;
+            const f32 fov_half     = fov_radians * 0.5f;
             const f32 tan_fov_half = tanf(fov_half);
             const f32 far_sub_near = clip_far - clip_near;
 
@@ -573,14 +587,14 @@ namespace sld {
             const f32 aspect_ratio,
             const f32 clip_near) {
 
-            const f32 fov_half     = fov * 0.5f;
+            const f32 fov_half     = fov_radians * 0.5f;
             const f32 tan_fov_half = tanf(fov_half);
 
             identity();
 
             r0c0 =  1.0f / (aspect_ratio * tan_fov_half);
             r1c1 =  1.0f / tan_fov_half;
-            r2c2 = -1.0f
+            r2c2 = -1.0f;
             r2c3 = -2.0f * clip_near;
             r3c2 = -1.0f;
             r3c3 = 0.0f;
