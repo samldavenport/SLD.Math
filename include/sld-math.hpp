@@ -12,6 +12,12 @@
 #   define SLD_MATH_API __declspec(dllimport)
 #endif
 
+// NOTE(SAM): these are based on opengl coordinate space
+#define SLD_MATH_DEFAULT_GLOBAL_UP     vec3(0.0f, 1.0f, 0.0f)
+#define SLD_MATH_DEFAULT_GLOBAL_X_AXIS vec3(1.0f, 0.0f, 0.0f)
+#define SLD_MATH_DEFAULT_GLOBAL_Y_AXIS vec3(0.0f, 1.0f, 0.0f)
+#define SLD_MATH_DEFAULT_GLOBAL_Z_AXIS vec3(0.0f, 0.0f, 1.0f)
+
 namespace sld {
 
     //--------------------------------------------------------------------
@@ -23,14 +29,24 @@ namespace sld {
     struct mat3;
     struct mat4;
     struct quat;
+    struct xform;
     struct view;
+    struct proj;
 
     //--------------------------------------------------------------------
-    // CONTEXT
+    // GLOBALS
     //--------------------------------------------------------------------
 
-    SLD_MATH_API void        math_set_global_up (const vec3& up);
-    SLD_MATH_API const vec3& math_get_global_up (void);
+    SLD_MATH_API void        math_set_global_up     (const vec3& up);
+    SLD_MATH_API void        math_set_global_x_axis (const vec3& x_axis);
+    SLD_MATH_API void        math_set_global_y_axis (const vec3& y_axis);
+    SLD_MATH_API void        math_set_global_z_axis (const vec3& z_axis);
+
+    SLD_MATH_API const vec3& math_get_global_up     (void);
+    SLD_MATH_API const vec3& math_set_global_x_axis (void);
+    SLD_MATH_API const vec3& math_set_global_y_axis (void);
+    SLD_MATH_API const vec3& math_set_global_z_axis (void);
+
 
     //--------------------------------------------------------------------
     // VECTOR 2 
@@ -199,16 +215,17 @@ namespace sld {
     // TRANSFORMS 
     //--------------------------------------------------------------------
 
-    SLD_MATH_API void xform_rotate_vector            (mat4* o_xform, const f32*  i_a, const vec3* i_v,           const u32 i_count = 1);
-    SLD_MATH_API void xform_rotate_axis_x            (mat4* o_xform, const f32*  i_a,                            const u32 i_count = 1);
-    SLD_MATH_API void xform_rotate_axis_y            (mat4* o_xform, const f32*  i_a,                            const u32 i_count = 1);
-    SLD_MATH_API void xform_rotate_axis_z            (mat4* o_xform, const f32*  i_a,                            const u32 i_count = 1);
-    SLD_MATH_API void xform_scale_uniform            (mat4* o_xform, const f32*  i_s,                            const u32 i_count = 1);
-    SLD_MATH_API void xform_scale_non_uniform        (mat4* o_xform, const vec3* i_s,                            const u32 i_count = 1);
-    SLD_MATH_API void xform_translate                (mat4* o_xform, const vec3* i_p,                            const u32 i_count = 1);
+    SLD_MATH_API void xform_rotate_vector            (xform* o_xform, const f32*  i_a, const vec3* i_v,           const u32 i_count = 1);
+    SLD_MATH_API void xform_rotate_axis_x            (xform* o_xform, const f32*  i_a,                            const u32 i_count = 1);
+    SLD_MATH_API void xform_rotate_axis_y            (xform* o_xform, const f32*  i_a,                            const u32 i_count = 1);
+    SLD_MATH_API void xform_rotate_axis_z            (xform* o_xform, const f32*  i_a,                            const u32 i_count = 1);
+    SLD_MATH_API void xform_scale_uniform            (xform* o_xform, const f32*  i_s,                            const u32 i_count = 1);
+    SLD_MATH_API void xform_scale_non_uniform        (xform* o_xform, const vec3* i_s,                            const u32 i_count = 1);
+    SLD_MATH_API void xform_translate                (xform* o_xform, const vec3* i_p,                            const u32 i_count = 1);
     SLD_MATH_API void xform_view_look_at             (view* o_view,  const vec3* i_origin, const vec3* i_target);
-    SLD_MATH_API void xform_project_near_to_far      (mat4* o_xform, const f32   i_aspect_ratio, const f32 i_fov_radians, const f32 i_near, const f32 i_far, const u32 i_count = 1);
-    SLD_MATH_API void xform_project_near_to_infinite (mat4* o_xform, const f32   i_aspect_ratio, const f32 i_fov_radians, const f32 i_near, const u32 i_count = 1);
+    SLD_MATH_API void xform_project_near_to_far      (proj* o_xform, const f32   i_aspect_ratio, const f32 i_fov_radians, const f32 i_near, const f32 i_far, const u32 i_count = 1);
+    SLD_MATH_API void xform_project_near_to_infinite (proj* o_xform, const f32   i_aspect_ratio, const f32 i_fov_radians, const f32 i_near, const u32 i_count = 1);
+
 
     //--------------------------------------------------------------------
     // DEFINITIONS 
@@ -512,6 +529,19 @@ namespace sld {
             r3c2 = -translation.z;
             r3c3 = 1.0f;
         } 
+    };
+
+    struct proj : mat4 {
+
+        inline void
+        near_to_far() {
+
+        }
+
+        inline void
+        near_to_infinite() {
+
+        }
     };
 };
 
