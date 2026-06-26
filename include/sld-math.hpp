@@ -8,6 +8,7 @@
 #include "sld-math-vec2.hpp"
 #include "sld-math-vec3.hpp"
 #include "sld-math-mat3.hpp"
+#include "sld-math-mat4.hpp"
 #include "sld-math-xforms.hpp"
 
 namespace sld {
@@ -72,10 +73,10 @@ namespace sld {
     // MATRIX 3 
     //--------------------------------------------------------------------
 
-    SLD_MATH_API void mat3_identity        (mat3& m);
-    SLD_MATH_API void mat3_transpose       (mat3& mt, const mat3& m);
-    SLD_MATH_API void mat3_invert          (mat3& mi, const mat3& m);
-    SLD_MATH_API void mat3_multiply        (mat3& mm, const mat3& a, const mat3* b);
+    SLD_MATH_API mat3 mat3_identity        (void);
+    SLD_MATH_API mat3 mat3_transpose       (const mat3& m);
+    SLD_MATH_API mat3 mat3_invert          (const mat3& m);
+    SLD_MATH_API mat3 mat3_multiply        (const mat3& a, const mat3& b);
     SLD_MATH_API f32  mat3_determinant     (const mat3& m);
 
     SLD_MATH_API void mat3_identity        (mat3* m,                                 const u32 i_count = 1);
@@ -87,6 +88,12 @@ namespace sld {
     //--------------------------------------------------------------------
     // MATRIX 4 
     //--------------------------------------------------------------------
+
+    SLD_MATH_API mat4 mat4_identity        (void);
+    SLD_MATH_API mat4 mat4_transpose       (const mat4& m);
+    SLD_MATH_API mat4 mat4_invert          (const mat4& m);
+    SLD_MATH_API mat4 mat4_multiply        (const mat4& a, const mat4& b);
+    SLD_MATH_API f32  mat4_determinant     (const mat4& m);
 
     SLD_MATH_API void mat4_identity        (mat4* o_m, const u32 i_count = 1);
     SLD_MATH_API void mat4_determinant     (f32*  o_d, const mat4* i_m,                  const u32 i_count = 1);

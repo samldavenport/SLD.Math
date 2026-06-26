@@ -6,6 +6,56 @@
 
 namespace sld {
 
+    SLD_MATH_API mat4
+    mat4_identity(
+        void) {
+
+        mat4 m;
+        m.r0c0 = 1.0f;
+        m.r0c1 = 0.0f;
+        m.r0c2 = 0.0f;
+        m.r0c3 = 0.0f;
+        m.r1c0 = 0.0f;
+        m.r1c1 = 1.0f;
+        m.r1c2 = 0.0f;
+        m.r1c3 = 0.0f;
+        m.r2c0 = 0.0f;
+        m.r2c1 = 0.0f;
+        m.r2c2 = 1.0f;
+        m.r2c3 = 0.0f;
+        m.r3c0 = 0.0f;
+        m.r3c1 = 0.0f;
+        m.r3c2 = 0.0f;
+        m.r3c3 = 1.0f;
+        return(m);
+    }
+    
+    SLD_MATH_API mat4
+    mat4_transpose(
+        const mat4& m) {
+
+    }
+    
+    SLD_MATH_API mat4
+    mat4_invert(
+        const mat4& m) {
+
+    }
+
+    SLD_MATH_API mat4
+    mat4_multiply(
+        const mat4& a,
+        const mat4& b) {
+
+    }
+
+    SLD_MATH_API f32
+    mat4_determinant(
+        const mat4& m) {
+
+    }
+
+
     SLD_MATH_API void
     mat4_identity(
         mat4* o_m,

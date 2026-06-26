@@ -14,9 +14,9 @@ namespace sld {
         const vec3& b) {
 
         const vec3 result = {
-            (a.x + a.x),
-            (a.y + a.y),
-            (a.z + a.z)
+            (a.x + b.x),
+            (a.y + b.y),
+            (a.z + b.z)
         };
         return(result);
     }
@@ -27,9 +27,9 @@ namespace sld {
         const vec3& b) {
 
         const vec3 result = {
-            (a.x - a.x),
-            (a.y - a.y),
-            (a.z - a.z)
+            (a.x - b.x),
+            (a.y - b.y),
+            (a.z - b.z)
         };
         return(result);
     }
