@@ -50,7 +50,6 @@ namespace sld {
     SLD_MATH_API vec3 vec3_project         (const vec3& a, const vec3& b);
     SLD_MATH_API vec3 vec3_reject          (const vec3& a, const vec3& b);
     SLD_MATH_API vec3 vec3_cross           (const vec3& a, const vec3& b);
-    SLD_MATH_API vec3 vec3_transform       (const vec3& v, const mat3& m);
     SLD_MATH_API vec3 vec3_scalar_multiply (const vec3& v, const f32   s);
     SLD_MATH_API vec3 vec3_scalar_divide   (const vec3& v, const f32   s);
     SLD_MATH_API f32  vec3_dot             (const vec3& a, const vec3& b);
@@ -58,16 +57,14 @@ namespace sld {
     SLD_MATH_API vec3 vec3_normalize       (const vec3& v);
 
     // pointer methods
-    SLD_MATH_API void vec3_add             (vec3* o_c, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
-    SLD_MATH_API void vec3_subtract        (vec3* o_c, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
-    SLD_MATH_API void vec3_project         (vec3* o_c, const vec2* i_a, const vec3* i_b, const u32 i_count = 1);
-    SLD_MATH_API void vec3_reject          (vec3* o_c, const vec2* i_a, const vec3* i_b, const u32 i_count = 1);
-    SLD_MATH_API void vec3_cross           (vec3* o_c, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void vec3_add             (vec3* o_v, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void vec3_subtract        (vec3* o_v, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void vec3_project         (vec3* o_v, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void vec3_reject          (vec3* o_v, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void vec3_cross           (vec3* o_v, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
     SLD_MATH_API void vec3_scalar_multiply (vec3* o_v, const vec3* i_v, const f32*  i_s, const u32 i_count = 1);
     SLD_MATH_API void vec3_scalar_divide   (vec3* o_v, const vec3* i_v, const f32*  i_s, const u32 i_count = 1);
     SLD_MATH_API void vec3_dot             (f32*  o_d, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
-    SLD_MATH_API void vec3_transform_mat3  (vec3* o_t, const vec3* i_v, const mat3* i_m, const u32 i_count = 1);
-    SLD_MATH_API void vec3_transform_mat4  (vec3* o_t, const vec3* i_v, const mat4* i_m, const u32 i_count = 1);
     SLD_MATH_API void vec3_magnitude       (f32*  o_m, const vec3* i_v,                  const u32 i_count = 1);
     SLD_MATH_API void vec3_normalize       (vec3* o_v, const vec3* i_v,                  const u32 i_count = 1);
 

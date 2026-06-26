@@ -153,6 +153,187 @@ namespace sld {
     // POINTER METHODS 
     //--------------------------------------------------------------------
 
+    SLD_MATH_API void
+    vec3_add(
+        vec3*       o_v,
+        const vec3* i_a,
+        const vec3* i_b,
+        const u32   i_count) {
+
+        for (
+            u32 index = 0;
+                index < i_count;
+              ++index) {
+
+            o_v[index] = vec3_add(
+                i_a[index],
+                i_b[index]
+            );
+        }
+    }
+
+    SLD_MATH_API void
+    vec3_subtract(
+        vec3*       o_v,
+        const vec3* i_a,
+        const vec3* i_b,
+        const u32   i_count) {
+
+        for (
+            u32 index = 0;
+                index < i_count;
+              ++index) {
+
+            o_v[index] = vec3_subtract(
+                i_a[index],
+                i_b[index]
+            );
+        }
+    }
+
+    SLD_MATH_API void
+    vec3_project(
+        vec3*       o_v,
+        const vec3* i_a,
+        const vec3* i_b,
+        const u32   i_count) {
+
+        for (
+            u32 index = 0;
+                index < i_count;
+              ++index) {
+
+            o_v[index] = vec3_project(
+                i_a[index],
+                i_b[index]
+            );
+        }
+    }
+
+    SLD_MATH_API void
+    vec3_reject(
+        vec3*       o_v,
+        const vec3* i_a,
+        const vec3* i_b,
+        const u32   i_count) {
+
+        for (
+            u32 index = 0;
+                index < i_count;
+              ++index) {
+
+            o_v[index] = vec3_reject(
+                i_a[index],
+                i_b[index]
+            );
+        }
+    }
+
+    SLD_MATH_API void
+    vec3_cross(
+        vec3*       o_v,
+        const vec3* i_a,
+        const vec3* i_b,
+        const u32   i_count) {
+
+        for (
+            u32 index = 0;
+                index < i_count;
+              ++index) {
+
+            o_v[index] = vec3_cross(
+                i_a[index],
+                i_b[index]
+            );
+        }
+    }
+
+    SLD_MATH_API void
+    vec3_scalar_multiply(
+        vec3*       o_v,
+        const vec3* i_v,
+        const f32*  i_s,
+        const u32   i_count) {
+
+        for (
+            u32 index = 0;
+                index < i_count;
+              ++index) {
+
+            o_v[index] = vec3_scalar_multiply(
+                i_v[index],
+                i_s[index]
+            );
+        }
+    }
+
+    SLD_MATH_API void
+    vec3_scalar_divide(
+        vec3*       o_v,
+        const vec3* i_v,
+        const f32*  i_s,
+        const u32   i_count) {
+
+        for (
+            u32 index = 0;
+                index < i_count;
+              ++index) {
+
+            o_v[index] = vec3_scalar_divide(
+                i_v[index],
+                i_s[index]
+            );
+        }
+    }
+
+    SLD_MATH_API void
+    vec3_dot(
+        f32*        o_d,
+        const vec3* i_a,
+        const vec3* i_b,
+        const u32   i_count) {
+
+        for (
+            u32 index = 0;
+                index < i_count;
+              ++index) {
+
+            o_d[index] = vec3_dot(
+                i_a[index],
+                i_b[index]
+            );
+        }
+    }
+
+    SLD_MATH_API void
+    vec3_magnitude(
+        f32*        o_m,
+        const vec3* i_v,
+        const u32   i_count) {
+
+        for (
+            u32 index = 0;
+                index < i_count;
+              ++index) {
+
+            o_m[index] = vec3_magnitude(i_v[index]);
+        }
+    }
+
+    SLD_MATH_API void
+    vec3_normalize(
+        vec3*       o_v,
+        const vec3* i_v,
+        const u32   i_count) {
+
+        for (
+            u32 index = 0;
+                index < i_count;
+              ++index) {
+
+            o_v[index] = vec3_normalize(i_v[index]);
+        }
+    }
 };
 
 #endif //VEC3_INL
