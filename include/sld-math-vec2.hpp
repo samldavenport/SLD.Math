@@ -4,7 +4,7 @@
 
 namespace sld {
 
-    SLD_MATH_API void
+    inline void
     vec2_add(
         vec2*       o_c, 
         const vec2* i_a, 
@@ -32,7 +32,7 @@ namespace sld {
         }
     }
 
-    SLD_MATH_API void
+    inline void
     vec2_sub(
         vec2*       o_c, 
         const vec2* i_a, 
@@ -60,7 +60,7 @@ namespace sld {
         }
     }
 
-    SLD_MATH_API void
+    inline void
     vec2_proj(
         vec2*       o_c, 
         const vec2* i_a, 
@@ -91,7 +91,7 @@ namespace sld {
         }
     }
 
-    SLD_MATH_API void
+    inline void
     vec2_rej(
         vec2*       o_c, 
         const vec2* i_a, 
@@ -122,7 +122,7 @@ namespace sld {
         }
     }
 
-    SLD_MATH_API void
+    inline void
     vec2_scalar_mul(
         vec2*       o_sv,
         const vec2* i_v,
@@ -150,7 +150,7 @@ namespace sld {
         }
     }
 
-    SLD_MATH_API void
+    inline void
     vec2_scalar_div(
         vec2*       o_sv,
         const vec2* i_v,
@@ -181,7 +181,7 @@ namespace sld {
         }
     }
 
-    SLD_MATH_API void
+    inline void
     vec2_dot(
         f32*        o_d,
         const vec2* i_a, 
@@ -210,7 +210,7 @@ namespace sld {
         }
     }
 
-    SLD_MATH_API void
+    inline void
     vec2_magnitude(
         f32*        o_m,
         const vec2* i_v,
@@ -237,7 +237,7 @@ namespace sld {
         }
     }
 
-    SLD_MATH_API void
+    inline void
     vec2_normalize(
         vec2*       o_vn,
         const vec2* i_v,

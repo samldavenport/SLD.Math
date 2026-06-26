@@ -1,6 +1,9 @@
-#pragma once
+#ifndef SLD_MATH_MAT3_HPP
+#define SLD_MATH_MAT3_HPP
 
-#include "sld-math.hpp"
+#include "sld-math-types.hpp"
+#include "sld-math-globals.hpp"
+#include "sld-math-vec3.hpp"
 
 namespace sld {
 
@@ -119,11 +122,11 @@ namespace sld {
             mat3&       t = o_t[index];
             const mat3& m = i_m[index];
         
-            vec3_cross(&r0_cross, &m.r1, &m.r2);
-            vec3_cross(&r1_cross, &m.r2, &m.r0);
-            vec3_cross(&r2_cross, &m.r0, &m.r2);
+            // vec3_cross(&r0_cross, &m.r1, &m.r2);
+            // vec3_cross(&r1_cross, &m.r2, &m.r0);
+            // vec3_cross(&r2_cross, &m.r0, &m.r2);
 
-            vec3_dot(&dot, &r2_cross, &m.r2);
+            // vec3_dot(&dot, &r2_cross, &m.r2);
 
             const f32 inv_dot = (1.0f / dot);
             
@@ -177,3 +180,5 @@ namespace sld {
         }
     }
 };
+
+#endif //SLD_MATH_MAT3_HPP
