@@ -1,6 +1,8 @@
-#pragma once
+#ifndef SLD_MATH_MAT4_HPP
+#define SLD_MATH_MAT4_HPP
 
-#include "sld-math.hpp"
+#include "sld-math-types.hpp"
+#include "sld-math-globals.hpp"
 
 namespace sld {
 
@@ -77,3 +79,5 @@ namespace sld {
 
     }
 };
+
+#endif //SLD_MATH_MAT4_HPP
