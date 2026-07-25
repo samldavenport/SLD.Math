@@ -5,12 +5,16 @@
 #include <sld.hpp>
 #include "sld-math-types.hpp"
 #include "sld-math-globals.hpp"
-#include "sld-math-vec2.hpp"
-#include "sld-math-vec3.hpp"
-#include "sld-math-mat3.hpp"
-#include "sld-math-xforms.hpp"
-
 namespace sld {
+
+    //--------------------------------------------------------------------
+    // TYPES 
+    //--------------------------------------------------------------------
+
+    struct vec2;
+    struct vec3;
+    struct mat3;
+    struct mat4;
 
     //--------------------------------------------------------------------
     // GLOBALS
