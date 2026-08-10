@@ -49,25 +49,25 @@ namespace sld {
 
         mat4 result = {};
 
-        result.r0c0 = a.r0c0 * b.r0c0 + a.r0c1 * b.r1c0 + a.r0c2 * b.r2c0 + a.r0c3 * b.r3c0;
-        result.r0c1 = a.r0c0 * b.r0c1 + a.r0c1 * b.r1c1 + a.r0c2 * b.r2c1 + a.r0c3 * b.r3c1;
-        result.r0c2 = a.r0c0 * b.r0c2 + a.r0c1 * b.r1c2 + a.r0c2 * b.r2c2 + a.r0c3 * b.r3c2;
-        result.r0c3 = a.r0c0 * b.r0c3 + a.r0c1 * b.r1c3 + a.r0c2 * b.r2c3 + a.r0c3 * b.r3c3;
+        result.r0c0 = (a.r0c0 * b.r0c0) + (a.r0c1 * b.r1c0) + (a.r0c2 * b.r2c0) + (a.r0c3 * b.r3c0);
+        result.r0c1 = (a.r0c0 * b.r0c1) + (a.r0c1 * b.r1c1) + (a.r0c2 * b.r2c1) + (a.r0c3 * b.r3c1);
+        result.r0c2 = (a.r0c0 * b.r0c2) + (a.r0c1 * b.r1c2) + (a.r0c2 * b.r2c2) + (a.r0c3 * b.r3c2);
+        result.r0c3 = (a.r0c0 * b.r0c3) + (a.r0c1 * b.r1c3) + (a.r0c2 * b.r2c3) + (a.r0c3 * b.r3c3);
 
-        result.r1c0 = a.r1c0 * b.r0c0 + a.r1c1 * b.r1c0 + a.r1c2 * b.r2c0 + a.r1c3 * b.r3c0;
-        result.r1c1 = a.r1c0 * b.r0c1 + a.r1c1 * b.r1c1 + a.r1c2 * b.r2c1 + a.r1c3 * b.r3c1;
-        result.r1c2 = a.r1c0 * b.r0c2 + a.r1c1 * b.r1c2 + a.r1c2 * b.r2c2 + a.r1c3 * b.r3c2;
-        result.r1c3 = a.r1c0 * b.r0c3 + a.r1c1 * b.r1c3 + a.r1c2 * b.r2c3 + a.r1c3 * b.r3c3;
+        result.r1c0 = (a.r1c0 * b.r0c0) + (a.r1c1 * b.r1c0) + (a.r1c2 * b.r2c0) + (a.r1c3 * b.r3c0);
+        result.r1c1 = (a.r1c0 * b.r0c1) + (a.r1c1 * b.r1c1) + (a.r1c2 * b.r2c1) + (a.r1c3 * b.r3c1);
+        result.r1c2 = (a.r1c0 * b.r0c2) + (a.r1c1 * b.r1c2) + (a.r1c2 * b.r2c2) + (a.r1c3 * b.r3c2);
+        result.r1c3 = (a.r1c0 * b.r0c3) + (a.r1c1 * b.r1c3) + (a.r1c2 * b.r2c3) + (a.r1c3 * b.r3c3);
 
-        result.r2c0 = a.r2c0 * b.r0c0 + a.r2c1 * b.r1c0 + a.r2c2 * b.r2c0 + a.r2c3 * b.r3c0;
-        result.r2c1 = a.r2c0 * b.r0c1 + a.r2c1 * b.r1c1 + a.r2c2 * b.r2c1 + a.r2c3 * b.r3c1;
-        result.r2c2 = a.r2c0 * b.r0c2 + a.r2c1 * b.r1c2 + a.r2c2 * b.r2c2 + a.r2c3 * b.r3c2;
-        result.r2c3 = a.r2c0 * b.r0c3 + a.r2c1 * b.r1c3 + a.r2c2 * b.r2c3 + a.r2c3 * b.r3c3;
+        result.r2c0 = (a.r2c0 * b.r0c0) + (a.r2c1 * b.r1c0) + (a.r2c2 * b.r2c0) + (a.r2c3 * b.r3c0);
+        result.r2c1 = (a.r2c0 * b.r0c1) + (a.r2c1 * b.r1c1) + (a.r2c2 * b.r2c1) + (a.r2c3 * b.r3c1);
+        result.r2c2 = (a.r2c0 * b.r0c2) + (a.r2c1 * b.r1c2) + (a.r2c2 * b.r2c2) + (a.r2c3 * b.r3c2);
+        result.r2c3 = (a.r2c0 * b.r0c3) + (a.r2c1 * b.r1c3) + (a.r2c2 * b.r2c3) + (a.r2c3 * b.r3c3);
 
-        result.r3c0 = a.r3c0 * b.r0c0 + a.r3c1 * b.r1c0 + a.r3c2 * b.r2c0 + a.r3c3 * b.r3c0;
-        result.r3c1 = a.r3c0 * b.r0c1 + a.r3c1 * b.r1c1 + a.r3c2 * b.r2c1 + a.r3c3 * b.r3c1;
-        result.r3c2 = a.r3c0 * b.r0c2 + a.r3c1 * b.r1c2 + a.r3c2 * b.r2c2 + a.r3c3 * b.r3c2;
-        result.r3c3 = a.r3c0 * b.r0c3 + a.r3c1 * b.r1c3 + a.r3c2 * b.r2c3 + a.r3c3 * b.r3c3;
+        result.r3c0 = (a.r3c0 * b.r0c0) + (a.r3c1 * b.r1c0) + (a.r3c2 * b.r2c0) + (a.r3c3 * b.r3c0);
+        result.r3c1 = (a.r3c0 * b.r0c1) + (a.r3c1 * b.r1c1) + (a.r3c2 * b.r2c1) + (a.r3c3 * b.r3c1);
+        result.r3c2 = (a.r3c0 * b.r0c2) + (a.r3c1 * b.r1c2) + (a.r3c2 * b.r2c2) + (a.r3c3 * b.r3c2);
+        result.r3c3 = (a.r3c0 * b.r0c3) + (a.r3c1 * b.r1c3) + (a.r3c2 * b.r2c3) + (a.r3c3 * b.r3c3);
 
         return result;
     }
