@@ -139,7 +139,7 @@ namespace sld {
     vec3_normalize(
         const vec3& v) {
 
-        const f32   m     = sqrtf(powf(v.x, 2.0f) + powf(v.y, 2.0f));
+        const f32   m     = vec3_magnitude(v);
         const f32   m_inv = (1.0f / m);
         const vec3  result = {
             (m_inv * v.x),        
