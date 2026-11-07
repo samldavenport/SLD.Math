@@ -1,7 +1,9 @@
 #ifndef SLD_MATH_VEC3_HPP
 #define SLD_MATH_VEC3_HPP
 
-#include <sld-math.hpp>
+#include <math.h>
+#include "sld-math-types.hpp"
+
 namespace sld {
 
     //--------------------------------------------------------------------

@@ -1,7 +1,8 @@
 #ifndef SLD_MATH_XFORMS_HPP
 #define SLD_MATH_XFORMS_HPP
 
-#include "sld-math.hpp"
+#include <math.h>
+#include "sld-math-types.hpp"
 #include "sld-math-plane.hpp"
 
 namespace sld {
