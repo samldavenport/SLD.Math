@@ -2,6 +2,7 @@
 #define SLD_MATH_XFORMS_HPP
 
 #include "sld-math.hpp"
+#include "sld-math-plane.hpp"
 
 namespace sld {
 
@@ -174,6 +175,149 @@ namespace sld {
         proj.r3c2 = -1.0f;
         proj.r3c3 =  0.0f;
         return(proj);
+    }
+
+    //--------------------------------------------------------------------
+    // SCREEN SPACE
+    //--------------------------------------------------------------------
+    // matrices are row major and multiply column vectors, so clip = m * (x, y, z, 1)
+    // ndc runs from -1 to 1 with +y up, the viewport is in pixels from its top left with +y down
+    // these use whatever m is, so they work with any projection, not just the textbook ones
+
+    // a point through a view projection
+    SLD_MATH_API vec4
+    xform_point_to_clip(
+        const mat4& m,
+        const vec3& p) {
+
+        const vec4 clip = {
+            ((m.r0c0 * p.x) + (m.r0c1 * p.y) + (m.r0c2 * p.z) + m.r0c3),
+            ((m.r1c0 * p.x) + (m.r1c1 * p.y) + (m.r1c2 * p.z) + m.r1c3),
+            ((m.r2c0 * p.x) + (m.r2c1 * p.y) + (m.r2c2 * p.z) + m.r2c3),
+            ((m.r3c0 * p.x) + (m.r3c1 * p.y) + (m.r3c2 * p.z) + m.r3c3)
+        };
+        return(clip);
+    }
+
+    // the perspective divide, false if the point is behind the camera
+    SLD_MATH_API bool
+    xform_clip_to_ndc(
+        const vec4& clip,
+        vec3&       ndc) {
+
+        if (clip.w <= CLIP_W_MIN_32) return(false);
+
+        const f32 w_inv = (1.0f / clip.w);
+        ndc.x = (clip.x * w_inv);
+        ndc.y = (clip.y * w_inv);
+        ndc.z = (clip.z * w_inv);
+        return(true);
+    }
+
+    SLD_MATH_API vec2
+    xform_ndc_to_viewport(
+        const vec2& ndc,
+        const vec2& viewport_min,
+        const vec2& viewport_size) {
+
+        const vec2 point = {
+            viewport_min.x + (((ndc.x + 1.0f) * 0.5f) * viewport_size.x),
+            viewport_min.y + (((1.0f - ndc.y) * 0.5f) * viewport_size.y)
+        };
+        return(point);
+    }
+
+    SLD_MATH_API vec2
+    xform_viewport_to_ndc(
+        const vec2& point,
+        const vec2& viewport_min,
+        const vec2& viewport_size) {
+
+        const vec2 ndc = {
+            (((point.x - viewport_min.x) / viewport_size.x) * 2.0f) - 1.0f,
+            1.0f - (((point.y - viewport_min.y) / viewport_size.y) * 2.0f)
+        };
+        return(ndc);
+    }
+
+    // where a world point is drawn in the viewport, false if it's behind the camera
+    SLD_MATH_API bool
+    xform_world_to_viewport(
+        const mat4& m,
+        const vec3& world,
+        const vec2& viewport_min,
+        const vec2& viewport_size,
+        vec2&       point) {
+
+        vec3 ndc;
+        if (!xform_clip_to_ndc(xform_point_to_clip(m, world), ndc)) return(false);
+
+        point = xform_ndc_to_viewport({ ndc.x, ndc.y }, viewport_min, viewport_size);
+        return(true);
+    }
+
+    // the two world planes holding every point drawn at an ndc point
+    // a point lands on ndc (x, y) when clip.x = x * clip.w and clip.y = y * clip.w,
+    // so it's on the planes (row 0 - x * row 3) . (p, 1) = 0 and (row 1 - y * row 3) . (p, 1) = 0
+    // they meet in the line through the camera and that point, their normals aren't unit length
+    SLD_MATH_API void
+    xform_ndc_to_planes(
+        const mat4& m,
+        const vec2& ndc,
+        plane&      plane_x,
+        plane&      plane_y) {
+
+        plane_x.normal   = {
+            m.r0c0 - (ndc.x * m.r3c0),
+            m.r0c1 - (ndc.x * m.r3c1),
+            m.r0c2 - (ndc.x * m.r3c2)
+        };
+        plane_x.distance = -(m.r0c3 - (ndc.x * m.r3c3));
+
+        plane_y.normal   = {
+            m.r1c0 - (ndc.y * m.r3c0),
+            m.r1c1 - (ndc.y * m.r3c1),
+            m.r1c2 - (ndc.y * m.r3c2)
+        };
+        plane_y.distance = -(m.r1c3 - (ndc.y * m.r3c3));
+    }
+
+    // the point on a plane that's drawn at an ndc point, the inverse of projecting it
+    // this doesn't need the view projection's inverse, or a ray built from the field of view
+    // false if the plane is edge on to the camera there, or the point is behind the camera, like past the horizon
+    SLD_MATH_API bool
+    xform_ndc_to_plane(
+        const mat4&  m,
+        const vec2&  ndc,
+        const plane& target,
+        vec3&        point) {
+
+        plane plane_x;
+        plane plane_y;
+        xform_ndc_to_planes(m, ndc, plane_x, plane_y);
+
+        vec3 hit;
+        if (!plane_intersect_planes(plane_x, plane_y, target, hit)) return(false);
+
+        const vec4 clip = xform_point_to_clip(m, hit);
+        if (clip.w <= CLIP_W_MIN_32) return(false);
+
+        point = hit;
+        return(true);
+    }
+
+    // the point on a plane under a point in the viewport
+    SLD_MATH_API bool
+    xform_viewport_to_plane(
+        const mat4&  m,
+        const vec2&  viewport_point,
+        const vec2&  viewport_min,
+        const vec2&  viewport_size,
+        const plane& target,
+        vec3&        point) {
+
+        const vec2 ndc = xform_viewport_to_ndc(viewport_point, viewport_min, viewport_size);
+        return(xform_ndc_to_plane(m, ndc, target, point));
     }
 };
 

@@ -149,8 +149,27 @@ namespace sld {
         return(result);
     }
 
+    // a vector of the given length pointing along yaw and pitch, with y up
+    // yaw turns around y, from +z at 0 towards +x at pi / 2
+    // pitch tilts above the xz plane, so pi / 2 points straight up
+    // an orbiting camera's origin is its target plus this
+    inline vec3
+    vec3_from_yaw_pitch(
+        const f32 yaw,
+        const f32 pitch,
+        const f32 length) {
+
+        const f32  cos_pitch = cosf(pitch);
+        const vec3 result    = {
+            (sinf(yaw) * cos_pitch * length),
+            (sinf(pitch)           * length),
+            (cosf(yaw) * cos_pitch * length)
+        };
+        return(result);
+    }
+
     //--------------------------------------------------------------------
-    // POINTER METHODS 
+    // POINTER METHODS
     //--------------------------------------------------------------------
 
     SLD_MATH_API void

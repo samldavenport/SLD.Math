@@ -5,10 +5,12 @@
 #include <sld.hpp>
 #include "sld-math-types.hpp"
 #include "sld-math-globals.hpp"
+#include "sld-math-scalar.hpp"
 #include "sld-math-vec2.hpp"
 #include "sld-math-vec3.hpp"
 #include "sld-math-mat3.hpp"
 #include "sld-math-mat4.hpp"
+#include "sld-math-plane.hpp"
 #include "sld-math-xforms.hpp"
 
 namespace sld {
@@ -56,6 +58,7 @@ namespace sld {
     SLD_MATH_API f32  vec3_dot             (const vec3& a, const vec3& b);
     SLD_MATH_API f32  vec3_magnitude       (const vec3& v);
     SLD_MATH_API vec3 vec3_normalize       (const vec3& v);
+    SLD_MATH_API vec3 vec3_from_yaw_pitch  (const f32 yaw, const f32 pitch, const f32 length);
 
     // pointer methods
     SLD_MATH_API void vec3_add             (vec3* o_v, const vec3* i_a, const vec3* i_b, const u32 i_count = 1);
@@ -78,6 +81,7 @@ namespace sld {
     SLD_MATH_API mat3 mat3_invert          (const mat3& m);
     SLD_MATH_API mat3 mat3_multiply        (const mat3& a, const mat3& b);
     SLD_MATH_API f32  mat3_determinant     (const mat3& m);
+    SLD_MATH_API bool mat3_try_invert      (const mat3& m, mat3& inv);
 
     SLD_MATH_API void mat3_identity        (mat3* m,                                 const u32 i_count = 1);
     SLD_MATH_API void mat3_transpose       (mat3* mt, const mat3*  m,                const u32 i_count = 1);
@@ -94,18 +98,32 @@ namespace sld {
     SLD_MATH_API mat4 mat4_invert          (const mat4& m);
     SLD_MATH_API mat4 mat4_multiply        (const mat4& a, const mat4& b);
     SLD_MATH_API f32  mat4_determinant     (const mat4& m);
+    SLD_MATH_API bool mat4_try_invert      (const mat4& m, mat4& inv);
 
     SLD_MATH_API void mat4_identity        (mat4* o_m, const u32 i_count = 1);
     SLD_MATH_API void mat4_determinant     (f32*  o_d, const mat4* i_m,                  const u32 i_count = 1);
     SLD_MATH_API void mat4_transpose       (mat4* o_t, const mat4* i_m,                  const u32 i_count = 1);
     SLD_MATH_API void mat4_invert          (mat4* o_t, const mat4* i_m,                  const u32 i_count = 1);
-    SLD_MATH_API void mat4_multiply        (mat4* o_c, const mat4* i_a, const mat3* i_b, const u32 i_count = 1);
+    SLD_MATH_API void mat4_multiply        (mat4* o_c, const mat4* i_a, const mat4* i_b, const u32 i_count = 1);
+
+    //--------------------------------------------------------------------
+    // PLANES AND RAYS
+    //--------------------------------------------------------------------
+
+    SLD_MATH_API plane plane_from_point_normal (const vec3& point, const vec3& normal);
+    SLD_MATH_API plane plane_from_points       (const vec3& a, const vec3& b, const vec3& c);
+    SLD_MATH_API plane plane_normalize         (const plane& p);
+    SLD_MATH_API f32   plane_signed_distance   (const plane& p, const vec3& point);
+    SLD_MATH_API vec3  plane_project_point     (const plane& p, const vec3& point);
+    SLD_MATH_API bool  plane_intersect_planes  (const plane& a, const plane& b, const plane& c, vec3& point);
+    SLD_MATH_API vec3  ray_get_point           (const ray& r, const f32 t);
+    SLD_MATH_API bool  ray_intersect_plane     (const ray& r, const plane& p, f32& t);
 
     //--------------------------------------------------------------------
     // TRANSFORMS 
     //--------------------------------------------------------------------
 
-    SLD_MATH_API vec3 xform_vec3                     (const vec3& v, const mat4 m);
+    SLD_MATH_API vec3 xform_vec3                     (const vec3& v, const mat3& m);
     SLD_MATH_API mat4 xform_translate                (const vec3& t);
     SLD_MATH_API mat4 xform_scale                    (const vec3& s);
     SLD_MATH_API mat4 xform_rotate_vector            (const vec3& r, const f32 rad);
@@ -121,11 +139,31 @@ namespace sld {
     SLD_MATH_API mat4 xform_project_near_to_infinite (const f32 fov_radians, const f32 aspect_ratio, const f32 clip_near);
 
     //--------------------------------------------------------------------
+    // SCREEN SPACE
+    //--------------------------------------------------------------------
+
+    SLD_MATH_API vec4 xform_point_to_clip     (const mat4& m, const vec3& p);
+    SLD_MATH_API bool xform_clip_to_ndc       (const vec4& clip, vec3& ndc);
+    SLD_MATH_API vec2 xform_ndc_to_viewport   (const vec2& ndc,   const vec2& viewport_min, const vec2& viewport_size);
+    SLD_MATH_API vec2 xform_viewport_to_ndc   (const vec2& point, const vec2& viewport_min, const vec2& viewport_size);
+    SLD_MATH_API bool xform_world_to_viewport (const mat4& m, const vec3& world, const vec2& viewport_min, const vec2& viewport_size, vec2& point);
+    SLD_MATH_API void xform_ndc_to_planes     (const mat4& m, const vec2& ndc, plane& plane_x, plane& plane_y);
+    SLD_MATH_API bool xform_ndc_to_plane      (const mat4& m, const vec2& ndc, const plane& target, vec3& point);
+    SLD_MATH_API bool xform_viewport_to_plane (const mat4& m, const vec2& viewport_point, const vec2& viewport_min, const vec2& viewport_size, const plane& target, vec3& point);
+
+    //--------------------------------------------------------------------
     // TRIGONOMETRY
     //--------------------------------------------------------------------
 
     SLD_MATH_API f32 trig_degrees_to_radians (const f32 d) { return(d * RADIANS_FACTOR); }
     SLD_MATH_API f32 trig_radians_to_degrees (const f32 r) { return(r * DEGREES_FACTOR); }
+
+    //--------------------------------------------------------------------
+    // SCALAR
+    //--------------------------------------------------------------------
+
+    SLD_MATH_API f32 math_clamp (const f32 v, const f32 min, const f32 max);
+    SLD_MATH_API f32 math_lerp  (const f32 a, const f32 b, const f32 t);
 };
 
 #endif //SLD_MATH_HPP

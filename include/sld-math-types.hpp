@@ -53,7 +53,28 @@ namespace sld {
     };
 
     //--------------------------------------------------------------------
-    // QUATERNION 
+    // PLANE
+    //--------------------------------------------------------------------
+
+    // the points p where dot(normal, p) == distance
+    // with a unit normal, distance is how far the plane is from the origin along the normal
+    struct plane {
+        vec3 normal;
+        f32  distance;
+    };
+
+    //--------------------------------------------------------------------
+    // RAY
+    //--------------------------------------------------------------------
+
+    // the points origin + (direction * t), for t >= 0
+    struct ray {
+        vec3 origin;
+        vec3 direction;
+    };
+
+    //--------------------------------------------------------------------
+    // QUATERNION
     //--------------------------------------------------------------------
 
     struct quat {
