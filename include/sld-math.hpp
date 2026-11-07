@@ -107,7 +107,7 @@ namespace sld {
     SLD_MATH_API void mat4_multiply        (mat4* o_c, const mat4* i_a, const mat4* i_b, const u32 i_count = 1);
 
     //--------------------------------------------------------------------
-    // PLANES AND RAYS
+    // PLANES 
     //--------------------------------------------------------------------
 
     SLD_MATH_API plane plane_from_point_normal (const vec3& point, const vec3& normal);
@@ -116,9 +116,14 @@ namespace sld {
     SLD_MATH_API f32   plane_signed_distance   (const plane& p, const vec3& point);
     SLD_MATH_API vec3  plane_project_point     (const plane& p, const vec3& point);
     SLD_MATH_API bool  plane_intersect_planes  (const plane& a, const plane& b, const plane& c, vec3& point);
+
+    //--------------------------------------------------------------------
+    // RAYS
+    //--------------------------------------------------------------------
+
     SLD_MATH_API vec3  ray_get_point           (const ray& r, const f32 t);
     SLD_MATH_API bool  ray_intersect_plane     (const ray& r, const plane& p, f32& t);
-
+    
     //--------------------------------------------------------------------
     // TRANSFORMS 
     //--------------------------------------------------------------------
