@@ -1,6 +1,7 @@
 #pragma once
 
-#include "sld-math.hpp"
+#include <math.h>
+#include "sld-math-types.hpp"
 
 namespace sld {
 

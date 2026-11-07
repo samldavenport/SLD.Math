@@ -32,10 +32,12 @@ if(PROJECT_IS_TOP_LEVEL)
         include/sld-math.hpp
         include/sld-math-types.hpp
         include/sld-math-globals.hpp
+        include/sld-math-scalar.hpp
         include/sld-math-vec2.hpp
         include/sld-math-vec3.hpp
         include/sld-math-mat3.hpp
         include/sld-math-mat4.hpp
+        include/sld-math-plane.hpp
         include/sld-math-xforms.hpp
     )
 

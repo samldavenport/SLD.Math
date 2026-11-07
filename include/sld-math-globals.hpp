@@ -20,6 +20,12 @@ namespace sld {
     constexpr f32 RADIANS_FACTOR = (PI_32 / 180.0f);
     constexpr f32 DEGREES_FACTOR = (180.f / PI_32);
 
+    // below this, a determinant or a ray's angle to a plane counts as zero
+    constexpr f32 EPSILON_32     = 0.000001f;
+
+    // a point whose clip space w is at or below this is behind the camera, or too close to it to project
+    constexpr f32 CLIP_W_MIN_32  = 0.0001f;
+
     //--------------------------------------------------------------------
     // GLOBALS
     //--------------------------------------------------------------------
